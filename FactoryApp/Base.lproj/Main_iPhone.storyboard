@@ -81,9 +81,66 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSR-vJ-uq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-659"/>
+            <point key="canvasLocation" x="1489" y="-659"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Join-->
+        <scene sceneID="lI3-UO-CnS">
+            <objects>
+                <viewController id="YhP-ev-sga" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qZl-sp-aWe"/>
+                        <viewControllerLayoutGuide type="bottom" id="k8J-ja-YB0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fco-zX-0bE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Join" id="OTx-ka-rRw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uqd-JP-Ikr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="7"/>
+        </scene>
+        <!--View Controller - Space-->
+        <scene sceneID="rEa-uz-WqU">
+            <objects>
+                <viewController id="piJ-Xy-2bX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Z5-D9-63l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv3-8e-KQy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EoG-Xh-LNm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Space" id="1px-2w-apK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maj-ga-EwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="667"/>
+        </scene>
+        <!--View Controller - About-->
+        <scene sceneID="9Yp-eK-The">
+            <objects>
+                <viewController id="yX7-F7-Tzd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9XW-C6-oAK"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0t-EW-wHH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yRu-3E-p81">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="6HL-Gz-J33"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOz-LB-Zyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="1359"/>
+        </scene>
+        <!--View Controller - Menu-->
         <scene sceneID="gBX-Ky-vdt">
             <objects>
                 <viewController id="oyn-EJ-LDY" sceneMemberID="viewController">
@@ -115,6 +172,9 @@
                                         <state key="normal" image="join-active-dark">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="YhP-ev-sga" kind="push" id="C9V-3J-ZU8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-J3-kY9">
                                         <rect key="frame" x="0.0" y="181" width="207" height="58"/>
@@ -122,6 +182,9 @@
                                         <state key="normal" image="space-active-dark">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="piJ-Xy-2bX" kind="push" id="Ubc-6F-sbr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q85-Su-C3s">
                                         <rect key="frame" x="0.0" y="239" width="207" height="58"/>
@@ -129,12 +192,15 @@
                                         <state key="normal" image="about-active-dark">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="yX7-F7-Tzd" kind="push" id="WuQ-j4-gUB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p06-Tu-qJ6">
-                                <rect key="frame" x="215" y="66" width="36" height="38"/>
+                                <rect key="frame" x="215" y="73" width="36" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="hamburger-gold">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,7 +209,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uFX-xb-z2s"/>
+                    <navigationItem key="navigationItem" title="Menu" id="uFX-xb-z2s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB8-3X-o8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
