@@ -22,6 +22,8 @@
 		553C045219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
 		553C045A19354B100088A5E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553C045819354B100088A5E9 /* InfoPlist.strings */; };
 		553C045C19354B100088A5E9 /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C045B19354B100088A5E9 /* FactoryAppTests.m */; };
+		559B99AF194748FC00907493 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99AC194748FC00907493 /* Member.m */; };
+		559B99B0194748FC00907493 /* MemberDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99AE194748FC00907493 /* MemberDatastore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		553C045719354B100088A5E9 /* FactoryAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FactoryAppTests-Info.plist"; sourceTree = "<group>"; };
 		553C045919354B100088A5E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		553C045B19354B100088A5E9 /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
+		559B99AB194748FC00907493 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		559B99AC194748FC00907493 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		559B99AD194748FC00907493 /* MemberDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDatastore.h; sourceTree = "<group>"; };
+		559B99AE194748FC00907493 /* MemberDatastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDatastore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 		553C043319354B100088A5E9 /* FactoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				559B99AA194748A300907493 /* Model */,
 				553C043C19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.h */,
 				553C043D19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m */,
 				553C043F19354B100088A5E9 /* Main_iPhone.storyboard */,
@@ -153,6 +160,17 @@
 				553C045819354B100088A5E9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		559B99AA194748A300907493 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				559B99AB194748FC00907493 /* Member.h */,
+				559B99AC194748FC00907493 /* Member.m */,
+				559B99AD194748FC00907493 /* MemberDatastore.h */,
+				559B99AE194748FC00907493 /* MemberDatastore.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +274,9 @@
 			files = (
 				553C043E19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
+				559B99AF194748FC00907493 /* Member.m in Sources */,
 				553C044719354B100088A5E9 /* AlphaNumericSequenceViewController.m in Sources */,
+				559B99B0194748FC00907493 /* MemberDatastore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +491,7 @@
 				553C046119354B100088A5E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		553C046219354B100088A5E9 /* Build configuration list for PBXNativeTarget "FactoryAppTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +500,7 @@
 				553C046419354B100088A5E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -363,6 +363,10 @@ Grand Rapids, MI 49503</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="IKN-ZZ-Kf8">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="oyn-EJ-LDY" kind="relationship" relationship="rootViewController" id="PHH-6B-tOP"/>
                     </connections>
