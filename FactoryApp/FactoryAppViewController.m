@@ -1,18 +1,18 @@
 //
-//  AlphaNumericSequenceViewController.m
+//  FactoryAppViewController.m
 //  FactoryApp
 //
 //  Created by David Wieringa on 5/27/14.
 //  Copyright (c) 2014 Userwise Solutions. All rights reserved.
 //
 
-#import "AlphaNumericSequenceViewController.h"
+#import "FactoryAppViewController.h"
 
-@interface AlphaNumericSequenceViewController ()
+@interface FactoryAppViewController ()
 
 @end
 
-@implementation AlphaNumericSequenceViewController
+@implementation FactoryAppViewController
 
 - (void)viewDidLoad
 {

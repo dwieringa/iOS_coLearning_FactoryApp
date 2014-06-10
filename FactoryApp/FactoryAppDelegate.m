@@ -1,14 +1,14 @@
 //
-//  AlphaNumericSequenceAppDelegate.m
+//  FactoryAppDelegate.m
 //  FactoryApp
 //
 //  Created by David Wieringa on 5/27/14.
 //  Copyright (c) 2014 Userwise Solutions. All rights reserved.
 //
 
-#import "AlphaNumericSequenceAppDelegate.h"
+#import "FactoryAppDelegate.h"
 
-@implementation AlphaNumericSequenceAppDelegate
+@implementation FactoryAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

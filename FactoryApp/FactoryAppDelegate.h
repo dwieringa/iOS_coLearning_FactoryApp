@@ -1,5 +1,5 @@
 //
-//  AlphaNumericSequenceAppDelegate.h
+//  FactoryAppDelegate.h
 //  FactoryApp
 //
 //  Created by David Wieringa on 5/27/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlphaNumericSequenceAppDelegate : UIResponder <UIApplicationDelegate>
+@interface FactoryAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -12,10 +12,10 @@
 		553C043219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
 		553C043819354B100088A5E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553C043619354B100088A5E9 /* InfoPlist.strings */; };
 		553C043A19354B100088A5E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C043919354B100088A5E9 /* main.m */; };
-		553C043E19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C043D19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m */; };
+		553C043E19354B100088A5E9 /* FactoryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C043D19354B100088A5E9 /* FactoryAppDelegate.m */; };
 		553C044119354B100088A5E9 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553C043F19354B100088A5E9 /* Main_iPhone.storyboard */; };
 		553C044419354B100088A5E9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553C044219354B100088A5E9 /* Main_iPad.storyboard */; };
-		553C044719354B100088A5E9 /* AlphaNumericSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C044619354B100088A5E9 /* AlphaNumericSequenceViewController.m */; };
+		553C044719354B100088A5E9 /* FactoryAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C044619354B100088A5E9 /* FactoryAppViewController.m */; };
 		553C044919354B100088A5E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553C044819354B100088A5E9 /* Images.xcassets */; };
 		553C045019354B100088A5E9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C044F19354B100088A5E9 /* XCTest.framework */; };
 		553C045119354B100088A5E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042D19354B100088A5E9 /* Foundation.framework */; };
@@ -45,12 +45,12 @@
 		553C043719354B100088A5E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		553C043919354B100088A5E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		553C043B19354B100088A5E9 /* FactoryApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FactoryApp-Prefix.pch"; sourceTree = "<group>"; };
-		553C043C19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaNumericSequenceAppDelegate.h; sourceTree = "<group>"; };
-		553C043D19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlphaNumericSequenceAppDelegate.m; sourceTree = "<group>"; };
+		553C043C19354B100088A5E9 /* FactoryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryAppDelegate.h; sourceTree = "<group>"; };
+		553C043D19354B100088A5E9 /* FactoryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppDelegate.m; sourceTree = "<group>"; };
 		553C044019354B100088A5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		553C044319354B100088A5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		553C044519354B100088A5E9 /* AlphaNumericSequenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaNumericSequenceViewController.h; sourceTree = "<group>"; };
-		553C044619354B100088A5E9 /* AlphaNumericSequenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlphaNumericSequenceViewController.m; sourceTree = "<group>"; };
+		553C044519354B100088A5E9 /* FactoryAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryAppViewController.h; sourceTree = "<group>"; };
+		553C044619354B100088A5E9 /* FactoryAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppViewController.m; sourceTree = "<group>"; };
 		553C044819354B100088A5E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		553C044E19354B100088A5E9 /* FactoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C044F19354B100088A5E9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -121,12 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				559B99AA194748A300907493 /* Model */,
-				553C043C19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.h */,
-				553C043D19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m */,
+				553C043C19354B100088A5E9 /* FactoryAppDelegate.h */,
+				553C043D19354B100088A5E9 /* FactoryAppDelegate.m */,
 				553C043F19354B100088A5E9 /* Main_iPhone.storyboard */,
 				553C044219354B100088A5E9 /* Main_iPad.storyboard */,
-				553C044519354B100088A5E9 /* AlphaNumericSequenceViewController.h */,
-				553C044619354B100088A5E9 /* AlphaNumericSequenceViewController.m */,
+				553C044519354B100088A5E9 /* FactoryAppViewController.h */,
+				553C044619354B100088A5E9 /* FactoryAppViewController.m */,
 				553C044819354B100088A5E9 /* Images.xcassets */,
 				553C043419354B100088A5E9 /* Supporting Files */,
 			);
@@ -272,10 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553C043E19354B100088A5E9 /* AlphaNumericSequenceAppDelegate.m in Sources */,
+				553C043E19354B100088A5E9 /* FactoryAppDelegate.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
 				559B99AF194748FC00907493 /* Member.m in Sources */,
-				553C044719354B100088A5E9 /* AlphaNumericSequenceViewController.m in Sources */,
+				553C044719354B100088A5E9 /* FactoryAppViewController.m in Sources */,
 				559B99B0194748FC00907493 /* MemberDatastore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

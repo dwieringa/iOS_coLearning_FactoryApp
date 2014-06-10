@@ -1,5 +1,5 @@
 //
-//  AlphaNumericSequenceViewController.h
+//  FactoryAppViewController.h
 //  FactoryApp
 //
 //  Created by David Wieringa on 5/27/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlphaNumericSequenceViewController : UIViewController
+@interface FactoryAppViewController : UIViewController
 
 @end

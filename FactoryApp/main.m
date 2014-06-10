@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AlphaNumericSequenceAppDelegate.h"
+#import "FactoryAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AlphaNumericSequenceAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([FactoryAppDelegate class]));
     }
 }
