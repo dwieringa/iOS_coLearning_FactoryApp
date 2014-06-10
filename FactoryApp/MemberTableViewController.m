@@ -7,6 +7,7 @@
 //
 
 #import "MemberTableViewController.h"
+#import "MemberDetailViewController.h"
 #import "Member.h"
 #import "MemberDatastore.h"
 
@@ -104,15 +105,20 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showMemberDetailsSegue"]) {
+        // Get the new view controller using [segue destinationViewController].
+        MemberDetailViewController *vc = segue.destinationViewController;
+
+        // Pass the selected object to the new view controller.
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Member *person = [datastore recordAtIndex:indexPath.row];
+        vc.person = person;
+    }
 }
-*/
 
 @end

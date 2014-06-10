@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="diU-4O-pEZ" kind="push" id="Mfg-h3-UbB"/>
+                                    <segue destination="diU-4O-pEZ" kind="push" identifier="showMemberDetailsSegue" id="Mfg-h3-UbB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -287,10 +287,10 @@ Grand Rapids, MI 49503</string>
             </objects>
             <point key="canvasLocation" x="1057" y="-659"/>
         </scene>
-        <!--View Controller-->
+        <!--Member Detail View Controller-->
         <scene sceneID="odR-oQ-SQ5">
             <objects>
-                <viewController id="diU-4O-pEZ" sceneMemberID="viewController">
+                <viewController id="diU-4O-pEZ" customClass="MemberDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SgH-Od-oFc"/>
                         <viewControllerLayoutGuide type="bottom" id="g9z-e7-7hd"/>
@@ -310,6 +310,9 @@ Grand Rapids, MI 49503</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lOn-6b-rSC"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Bu9-r7-Sr4" id="ziW-0h-8ij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAi-IE-Qnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
