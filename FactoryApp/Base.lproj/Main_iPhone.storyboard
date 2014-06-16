@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1489" y="7"/>
         </scene>
-        <!--View Controller - Space-->
+        <!--Space View Controller - Space-->
         <scene sceneID="rEa-uz-WqU">
             <objects>
-                <viewController id="piJ-Xy-2bX" sceneMemberID="viewController">
+                <viewController id="piJ-Xy-2bX" customClass="SpaceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Z5-D9-63l"/>
                         <viewControllerLayoutGuide type="bottom" id="Dv3-8e-KQy"/>
@@ -86,9 +86,57 @@
                     <view key="view" contentMode="scaleToFill" id="EoG-Xh-LNm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cka-II-ptc">
+                                <rect key="frame" x="45" y="95" width="230" height="399"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPEN WORKSPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-4z-h08">
+                                <rect key="frame" x="45" y="532" width="230" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-NV-qO1">
+                                <rect key="frame" x="290" y="95" width="30" height="399"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="nLQ-qb-93f"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-eQ-pe9">
+                                <rect key="frame" x="0.0" y="95" width="30" height="399"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="XC4-x7-tui"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cka-II-ptc" firstAttribute="top" secondItem="2Z5-D9-63l" secondAttribute="bottom" constant="31" id="1VX-I8-yG9"/>
+                            <constraint firstItem="rNc-eQ-pe9" firstAttribute="bottom" secondItem="Cka-II-ptc" secondAttribute="bottom" id="78n-bn-4cB"/>
+                            <constraint firstItem="wER-4z-h08" firstAttribute="trailing" secondItem="Cka-II-ptc" secondAttribute="trailing" id="Eez-ft-rTf"/>
+                            <constraint firstItem="CYQ-NV-qO1" firstAttribute="leading" secondItem="Cka-II-ptc" secondAttribute="trailing" constant="15" id="Fqf-HI-WIG"/>
+                            <constraint firstItem="Cka-II-ptc" firstAttribute="top" secondItem="rNc-eQ-pe9" secondAttribute="top" id="JEI-rZ-I5o"/>
+                            <constraint firstItem="rNc-eQ-pe9" firstAttribute="leading" secondItem="EoG-Xh-LNm" secondAttribute="leading" id="d8r-j9-t5n"/>
+                            <constraint firstItem="CYQ-NV-qO1" firstAttribute="bottom" secondItem="Cka-II-ptc" secondAttribute="bottom" id="fB3-nb-w56"/>
+                            <constraint firstAttribute="trailing" secondItem="CYQ-NV-qO1" secondAttribute="trailing" id="jGh-cj-MMW"/>
+                            <constraint firstItem="Cka-II-ptc" firstAttribute="leading" secondItem="rNc-eQ-pe9" secondAttribute="trailing" constant="15" id="jhN-5f-uH1"/>
+                            <constraint firstAttribute="bottom" secondItem="wER-4z-h08" secondAttribute="bottom" id="m13-8I-twB"/>
+                            <constraint firstItem="wER-4z-h08" firstAttribute="leading" secondItem="Cka-II-ptc" secondAttribute="leading" id="mLL-oD-Qmc"/>
+                            <constraint firstItem="wER-4z-h08" firstAttribute="top" secondItem="Cka-II-ptc" secondAttribute="bottom" constant="38" id="n8t-YF-oMI"/>
+                            <constraint firstItem="CYQ-NV-qO1" firstAttribute="top" secondItem="Cka-II-ptc" secondAttribute="top" id="uGm-yu-Rgl"/>
+                            <constraint firstItem="Dv3-8e-KQy" firstAttribute="top" secondItem="rNc-eQ-pe9" secondAttribute="bottom" constant="74" id="xFp-li-oTw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Space" id="1px-2w-apK"/>
+                    <connections>
+                        <outlet property="leftImageView" destination="rNc-eQ-pe9" id="PDJ-EO-KBX"/>
+                        <outlet property="rightImageView" destination="CYQ-NV-qO1" id="Pt2-ur-8v4"/>
+                        <outlet property="scrollView" destination="Cka-II-ptc" id="cLS-OC-nCa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maj-ga-EwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

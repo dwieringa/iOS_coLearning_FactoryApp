@@ -23,6 +23,7 @@
 		553C045A19354B100088A5E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553C045819354B100088A5E9 /* InfoPlist.strings */; };
 		553C045C19354B100088A5E9 /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C045B19354B100088A5E9 /* FactoryAppTests.m */; };
 		557179CA194F7B68003F8A19 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557179C9194F7B68003F8A19 /* JoinViewController.m */; };
+		557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557179CC194F8B05003F8A19 /* SpaceViewController.m */; };
 		559B99AF194748FC00907493 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99AC194748FC00907493 /* Member.m */; };
 		559B99B0194748FC00907493 /* MemberDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99AE194748FC00907493 /* MemberDatastore.m */; };
 		559B99B31947539E00907493 /* MemberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99B21947539E00907493 /* MemberTableViewController.m */; };
@@ -62,6 +63,8 @@
 		553C045B19354B100088A5E9 /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
 		557179C8194F7B68003F8A19 /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinViewController.h; path = ../JoinViewController.h; sourceTree = "<group>"; };
 		557179C9194F7B68003F8A19 /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinViewController.m; path = ../JoinViewController.m; sourceTree = "<group>"; };
+		557179CB194F8B05003F8A19 /* SpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceViewController.h; sourceTree = "<group>"; };
+		557179CC194F8B05003F8A19 /* SpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceViewController.m; sourceTree = "<group>"; };
 		559B99AB194748FC00907493 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
 		559B99AC194748FC00907493 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		559B99AD194748FC00907493 /* MemberDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDatastore.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				559B99B51947B3F300907493 /* MemberDetailViewController.m */,
 				557179C8194F7B68003F8A19 /* JoinViewController.h */,
 				557179C9194F7B68003F8A19 /* JoinViewController.m */,
+				557179CB194F8B05003F8A19 /* SpaceViewController.h */,
+				557179CC194F8B05003F8A19 /* SpaceViewController.m */,
 				553C044819354B100088A5E9 /* Images.xcassets */,
 				553C043419354B100088A5E9 /* Supporting Files */,
 			);
@@ -290,6 +295,7 @@
 				553C043E19354B100088A5E9 /* FactoryAppDelegate.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
 				559B99AF194748FC00907493 /* Member.m in Sources */,
+				557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */,
 				559B99B31947539E00907493 /* MemberTableViewController.m in Sources */,
 				559B99B61947B3F300907493 /* MemberDetailViewController.m in Sources */,
 				553C044719354B100088A5E9 /* FactoryAppViewController.m in Sources */,
