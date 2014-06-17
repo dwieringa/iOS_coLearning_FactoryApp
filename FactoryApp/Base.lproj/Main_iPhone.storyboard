@@ -83,7 +83,7 @@
                         <viewControllerLayoutGuide type="top" id="2Z5-D9-63l"/>
                         <viewControllerLayoutGuide type="bottom" id="Dv3-8e-KQy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EoG-Xh-LNm">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="EoG-Xh-LNm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
