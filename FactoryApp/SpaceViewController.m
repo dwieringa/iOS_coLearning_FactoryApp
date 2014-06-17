@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
 @property (strong, nonatomic, readonly) NSArray *photos;
+@property (nonatomic) NSInteger selectedImageIndex;
 
 @end
 
@@ -40,20 +41,59 @@
     return _photos;
 }
 
+- (void)setSelectedImageIndex:(NSInteger)imageIndex
+{
+    _selectedImageIndex = imageIndex;
+    if (_selectedImageIndex < 0) _selectedImageIndex = self.photos.count-1;
+    if (_selectedImageIndex >= self.photos.count) _selectedImageIndex = 0;
+    
+    self.mainImageView.image = self.photos[_selectedImageIndex];
+
+    // load left image view
+    if (_selectedImageIndex == 0) {
+        self.leftImageView.image = self.photos[self.photos.count-1];
+    } else {
+        self.leftImageView.image = self.photos[_selectedImageIndex-1];
+    }
+    
+    // load right image view
+    if (_selectedImageIndex == self.photos.count-1) {
+        self.rightImageView.image = self.photos[0];
+    } else {
+        self.rightImageView.image = self.photos[_selectedImageIndex+1];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.mainImageView.image = self.photos[1];
-    self.leftImageView.image = self.photos[0];
-    self.rightImageView.image = self.photos[2];
+    self.mainImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.mainImageView.layer.borderWidth = 1.5;
     
+    self.leftImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.leftImageView.layer.borderWidth = 1.5;
+    
+    self.rightImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.rightImageView.layer.borderWidth = 1.5;
+    
+    self.selectedImageIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)leftSwipeDetected:(UISwipeGestureRecognizer *)sender
+{
+    self.selectedImageIndex = self.selectedImageIndex + 1;
+}
+
+- (IBAction)rightSwipeDetected:(UISwipeGestureRecognizer *)sender
+{
+    self.selectedImageIndex = self.selectedImageIndex - 1;
 }
 
 /*

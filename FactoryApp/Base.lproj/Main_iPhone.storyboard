@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1489" y="7"/>
         </scene>
-        <!--Space View Controller - Space-->
+        <!--Space View Controller - SPACE-->
         <scene sceneID="rEa-uz-WqU">
             <objects>
                 <viewController id="piJ-Xy-2bX" customClass="SpaceViewController" sceneMemberID="viewController">
@@ -91,26 +91,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="336" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cro-Dn-XJz" userLabel="Main Image View">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cro-Dn-XJz" userLabel="Main Image View">
                                 <rect key="frame" x="40" y="95" width="240" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="399" id="q73-gd-RAZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Bkw-Mi-qHp" appends="YES" id="Xqz-1X-V9F"/>
+                                    <outletCollection property="gestureRecognizers" destination="Syt-Fn-sfc" appends="YES" id="z62-5i-OSl"/>
+                                </connections>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="OPEN WORKSPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-4z-h08">
-                                <rect key="frame" x="45" y="532" width="230" height="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPEN WORKSPACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-4z-h08">
+                                <rect key="frame" x="40" y="509" width="240" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3bx-tI-ucy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-NV-qO1" userLabel="Right Image View">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-NV-qO1" userLabel="Right Image View">
                                 <rect key="frame" x="290" y="95" width="240" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="plz-u9-1hH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-eQ-pe9" userLabel="Left Image View">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-eQ-pe9" userLabel="Left Image View">
                                 <rect key="frame" x="-210" y="95" width="240" height="399"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -123,19 +134,22 @@
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="width" secondItem="rNc-eQ-pe9" secondAttribute="width" id="26t-bd-Z2G"/>
                             <constraint firstItem="rNc-eQ-pe9" firstAttribute="trailing" secondItem="EoG-Xh-LNm" secondAttribute="leading" constant="30" id="2p7-Ol-ZYc"/>
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="width" secondItem="Cro-Dn-XJz" secondAttribute="width" id="70S-ux-JiQ"/>
+                            <constraint firstItem="Cro-Dn-XJz" firstAttribute="centerX" secondItem="wER-4z-h08" secondAttribute="centerX" id="8I1-05-4Jf"/>
                             <constraint firstItem="Cro-Dn-XJz" firstAttribute="top" secondItem="rNc-eQ-pe9" secondAttribute="top" id="EES-yr-lEn"/>
+                            <constraint firstItem="Cro-Dn-XJz" firstAttribute="centerX" secondItem="EoG-Xh-LNm" secondAttribute="centerX" id="IDn-9g-mq5"/>
                             <constraint firstItem="Cro-Dn-XJz" firstAttribute="bottom" secondItem="rNc-eQ-pe9" secondAttribute="bottom" id="LeG-Rb-X8y"/>
                             <constraint firstItem="Cro-Dn-XJz" firstAttribute="top" secondItem="2Z5-D9-63l" secondAttribute="bottom" constant="31" id="Shr-oe-F8r"/>
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="height" secondItem="rNc-eQ-pe9" secondAttribute="height" id="XCs-ac-ZUT"/>
+                            <constraint firstItem="Cro-Dn-XJz" firstAttribute="width" secondItem="wER-4z-h08" secondAttribute="width" id="fWq-uf-l0P"/>
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="height" secondItem="Cro-Dn-XJz" secondAttribute="height" id="hVv-gZ-SI3"/>
-                            <constraint firstItem="wER-4z-h08" firstAttribute="top" secondItem="Cro-Dn-XJz" secondAttribute="bottom" constant="38" id="iZU-s9-NXB"/>
+                            <constraint firstItem="wER-4z-h08" firstAttribute="top" secondItem="Cro-Dn-XJz" secondAttribute="bottom" constant="15" id="iZU-s9-NXB"/>
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="leading" secondItem="EoG-Xh-LNm" secondAttribute="trailing" constant="-30" id="kie-n4-wUc"/>
                             <constraint firstItem="CYQ-NV-qO1" firstAttribute="bottom" secondItem="Cro-Dn-XJz" secondAttribute="bottom" id="lee-95-tao"/>
-                            <constraint firstAttribute="bottom" secondItem="wER-4z-h08" secondAttribute="bottom" id="m13-8I-twB"/>
                             <constraint firstItem="Cro-Dn-XJz" firstAttribute="top" secondItem="CYQ-NV-qO1" secondAttribute="top" id="vLl-ZF-UIA"/>
+                            <constraint firstItem="Cro-Dn-XJz" firstAttribute="centerX" secondItem="wER-4z-h08" secondAttribute="centerX" id="w0v-ih-jim"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Space" id="1px-2w-apK"/>
+                    <navigationItem key="navigationItem" title="SPACE" id="1px-2w-apK"/>
                     <connections>
                         <outlet property="leftImageView" destination="rNc-eQ-pe9" id="PDJ-EO-KBX"/>
                         <outlet property="mainImageView" destination="Cro-Dn-XJz" id="tZK-e7-ePR"/>
@@ -143,6 +157,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maj-ga-EwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Bkw-Mi-qHp" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="rightSwipeDetected:" destination="piJ-Xy-2bX" id="eNY-F3-x1Z"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Syt-Fn-sfc" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="leftSwipeDetected:" destination="piJ-Xy-2bX" id="laD-7J-z88"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1489" y="667"/>
         </scene>
