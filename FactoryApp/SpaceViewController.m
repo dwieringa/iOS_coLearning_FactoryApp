@@ -9,9 +9,10 @@
 #import "SpaceViewController.h"
 
 @interface SpaceViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
+@property (strong, nonatomic, readonly) NSArray *photos;
 
 @end
 
@@ -26,49 +27,27 @@
     return self;
 }
 
+@synthesize photos = _photos;
+- (NSArray *)photos
+{
+    if (!_photos) _photos = [NSArray arrayWithObjects:
+                             [UIImage imageNamed:@"kitchen"],
+                             [UIImage imageNamed:@"meeting room"],
+                             [UIImage imageNamed:@"open space"],
+                             [UIImage imageNamed:@"open space 2"],
+                             [UIImage imageNamed:@"skype room"],
+                             nil];
+    return _photos;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.mainImageView.image = self.photos[1];
+    self.leftImageView.image = self.photos[0];
+    self.rightImageView.image = self.photos[2];
     
-    self.scrollView.pagingEnabled = YES;
-    
-    CGRect viewRect = self.scrollView.frame;
-    viewRect.origin.x = 0;
-    viewRect.origin.y = 0;
-    CGRect contentRect = viewRect;
-    contentRect.size.width *= 5;
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:viewRect];
-    imageView.image = [UIImage imageNamed:@"kitchen"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.scrollView addSubview:imageView];
-    
-    viewRect.origin.x += viewRect.size.width;
-    imageView = [[UIImageView alloc] initWithFrame:viewRect];
-    imageView.image = [UIImage imageNamed:@"meeting room"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.scrollView addSubview:imageView];
-    
-    viewRect.origin.x += viewRect.size.width;
-    imageView = [[UIImageView alloc] initWithFrame:viewRect];
-    imageView.image = [UIImage imageNamed:@"open space"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.scrollView addSubview:imageView];
-    
-    viewRect.origin.x += viewRect.size.width;
-    imageView = [[UIImageView alloc] initWithFrame:viewRect];
-    imageView.image = [UIImage imageNamed:@"open space 2"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.scrollView addSubview:imageView];
-    
-    viewRect.origin.x += viewRect.size.width;
-    imageView = [[UIImageView alloc] initWithFrame:viewRect];
-    imageView.image = [UIImage imageNamed:@"skype room"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.scrollView addSubview:imageView];
-    
-    self.scrollView.contentSize = contentRect.size;
 }
 
 - (void)didReceiveMemoryWarning
