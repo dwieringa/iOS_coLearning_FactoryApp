@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
 		553C042A19354B100088A5E9 /* FactoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C042D19354B100088A5E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		553C042F19354B100088A5E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +122,7 @@
 		553C042119354B100088A5E9 = {
 			isa = PBXGroup;
 			children = (
+				5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */,
 				553C043319354B100088A5E9 /* FactoryApp */,
 				553C045519354B100088A5E9 /* FactoryAppTests */,
 				553C042C19354B100088A5E9 /* Frameworks */,
@@ -247,6 +249,7 @@
 				553C042719354B100088A5E9 /* Frameworks */,
 				553C042819354B100088A5E9 /* Resources */,
 				55717A231951F382003F8A19 /* ShellScript */,
+				5518E91D195261AA00EFB1BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -334,6 +337,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5518E91D195261AA00EFB1BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]\nthen /usr/bin/perl -pe 's/(BUILD_NUMBER = )(\\d+)/$1.($2+1)/eg' -i buildnumber.xcconfig\nfi";
+		};
 		55717A231951F382003F8A19 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +438,7 @@
 /* Begin XCBuildConfiguration section */
 		553C045D19354B100088A5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -461,6 +478,7 @@
 		};
 		553C045E19354B100088A5E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -494,6 +512,7 @@
 		};
 		553C046019354B100088A5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -514,6 +533,7 @@
 		};
 		553C046119354B100088A5E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -534,6 +554,7 @@
 		};
 		553C046319354B100088A5E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FactoryApp.app/FactoryApp";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -556,6 +577,7 @@
 		};
 		553C046419354B100088A5E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FactoryApp.app/FactoryApp";
 				FRAMEWORK_SEARCH_PATHS = (
