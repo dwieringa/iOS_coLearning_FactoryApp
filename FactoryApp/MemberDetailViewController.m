@@ -9,6 +9,8 @@
 #import "MemberDetailViewController.h"
 
 @interface MemberDetailViewController ()
+@property IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
 @end
 

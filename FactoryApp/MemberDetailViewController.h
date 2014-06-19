@@ -13,6 +13,5 @@
 @interface MemberDetailViewController : UIViewController
 
 @property (nonatomic) Member *person;
-@property IBOutlet UILabel *nameLabel;
 
 @end

@@ -17,7 +17,8 @@
 @property NSString *fb;
 @property NSString *name;
 @property NSString *twitter;
-@property UIImage *pic;
+@property NSURL *picURL;
+@property (readonly) UIImage *pic;
 
 - (id)initWithDictionary:(NSDictionary *)properties;
 
