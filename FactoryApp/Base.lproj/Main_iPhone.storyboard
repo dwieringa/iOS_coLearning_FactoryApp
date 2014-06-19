@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="open space" translatesAutoresizingMaskIntoConstraints="NO" id="RSc-Cf-jMZ" userLabel="Background Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="open space-blurred" translatesAutoresizingMaskIntoConstraints="NO" id="RSc-Cf-jMZ" userLabel="Background Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="336" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -440,7 +440,7 @@ Grand Rapids, MI 49503</string>
         <image name="hamburger-gold" width="67" height="67"/>
         <image name="join-active-dark" width="411" height="101"/>
         <image name="meet-active-dark" width="411" height="101"/>
-        <image name="open space" width="641" height="1013"/>
+        <image name="open space-blurred" width="641" height="1013"/>
         <image name="space-active-dark" width="411" height="101"/>
         <image name="twitter" width="88" height="88"/>
         <image name="visitus" width="157" height="158"/>

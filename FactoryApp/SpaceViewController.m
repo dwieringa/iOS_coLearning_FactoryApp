@@ -32,11 +32,12 @@
 - (NSArray *)photos
 {
     if (!_photos) _photos = [NSArray arrayWithObjects:
-                             [UIImage imageNamed:@"kitchen"],
-                             [UIImage imageNamed:@"meeting room"],
-                             [UIImage imageNamed:@"open space"],
-                             [UIImage imageNamed:@"open space 2"],
-                             [UIImage imageNamed:@"skype room"],
+                             [UIImage imageNamed:@"kitchen-clear"],
+                             [UIImage imageNamed:@"meeting room-clear"],
+                             [UIImage imageNamed:@"open space-clear"],
+                             [UIImage imageNamed:@"open space-blurred"],
+                             [UIImage imageNamed:@"open space 2-clear"],
+                             [UIImage imageNamed:@"skype room-clear"],
                              nil];
     return _photos;
 }
