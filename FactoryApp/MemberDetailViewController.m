@@ -7,10 +7,13 @@
 //
 
 #import "MemberDetailViewController.h"
+#import "WebViewController.h"
 
 @interface MemberDetailViewController ()
 @property IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *askMeAbout;
+@property (weak, nonatomic) IBOutlet UILabel *aboutMember;
 
 @end
 
@@ -29,6 +32,26 @@
 {
     [super viewDidLoad];
     self.nameLabel.text = self.person.name;
+    self.photoImageView.image = self.person.pic;
+    self.askMeAbout.text = self.person.ama;
+    [self.askMeAbout sizeToFit];
+    self.aboutMember.text = self.person.bio;
+    [self.aboutMember sizeToFit];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
+- (IBAction)backButtonPressed:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,15 +64,28 @@
     _person = person;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showTwitterSegue"]) {
+        // Get the new view controller using [segue destinationViewController].
+        WebViewController *vc = segue.destinationViewController;
+        
+        // Pass the needed URL to the new view controller.
+        NSString *urlString = [NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter];
+        vc.url = [NSURL URLWithString:urlString];
+    } else if ([[segue identifier] isEqualToString:@"showFacebookSegue"]) {
+        // Get the new view controller using [segue destinationViewController].
+        WebViewController *vc = segue.destinationViewController;
+        
+        // Pass the needed URL to the new view controller.
+        NSString *urlString = [NSString stringWithFormat:@"http://facebook.com/profile.php?id=%@",self.person.fb];
+        vc.url = [NSURL URLWithString:urlString];
+    }
 }
-*/
+
 
 @end

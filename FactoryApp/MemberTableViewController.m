@@ -63,7 +63,12 @@
     // Configure the cell...
     Member *member = [datastore recordAtIndex:indexPath.row];
     cell.textLabel.text = member.name;
-    
+    cell.imageView.image = member.pic;
+//    cell.imageView.frame = CGRectMake(0, 0, 10, 10);
+//    cell.imageView.contentMode = UIViewContentModeCenter;
+    cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
+//    NSLog(@"size: width = %f   height= %f",cell.imageView.frame.size.width, cell.imageView.frame.size.height);
+    cell.imageView.clipsToBounds = YES;
     return cell;
 }
 

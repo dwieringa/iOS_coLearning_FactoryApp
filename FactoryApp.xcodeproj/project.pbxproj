@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550B51E11953D92B00B531CA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E01953D92B00B531CA /* WebViewController.m */; };
 		553C042E19354B100088A5E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042D19354B100088A5E9 /* Foundation.framework */; };
 		553C043019354B100088A5E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042F19354B100088A5E9 /* CoreGraphics.framework */; };
 		553C043219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550B51DF1953D92B00B531CA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		550B51E01953D92B00B531CA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
 		553C042A19354B100088A5E9 /* FactoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C042D19354B100088A5E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -171,6 +174,8 @@
 				559B99B51947B3F300907493 /* MemberDetailViewController.m */,
 				557179C8194F7B68003F8A19 /* JoinViewController.h */,
 				557179C9194F7B68003F8A19 /* JoinViewController.m */,
+				550B51DF1953D92B00B531CA /* WebViewController.h */,
+				550B51E01953D92B00B531CA /* WebViewController.m */,
 				557179CB194F8B05003F8A19 /* SpaceViewController.h */,
 				557179CC194F8B05003F8A19 /* SpaceViewController.m */,
 				553C044819354B100088A5E9 /* Images.xcassets */,
@@ -371,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				553C043E19354B100088A5E9 /* FactoryAppDelegate.m in Sources */,
+				550B51E11953D92B00B531CA /* WebViewController.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
 				559B99AF194748FC00907493 /* Member.m in Sources */,
 				557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */,

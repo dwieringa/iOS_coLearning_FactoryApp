@@ -20,7 +20,7 @@
         _fb = properties[@"FB"];
         _name = properties[@"NAME"];
         _twitter = properties[@"TWITTER"];
-        _picURL = properties[@"pic"][@"url"];
+        _picURL = [NSURL URLWithString:properties[@"pic"][@"url"]];
     }
     return self;
 }
