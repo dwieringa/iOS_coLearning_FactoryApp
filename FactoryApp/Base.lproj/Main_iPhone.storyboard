@@ -408,6 +408,9 @@ Grand Rapids, MI 49503</string>
                                         <state key="normal" image="email">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="emailButtonPushed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="8md-3O-u3E"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
                                         <rect key="frame" x="64" y="268" width="50" height="50"/>

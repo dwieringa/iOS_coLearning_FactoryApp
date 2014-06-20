@@ -67,6 +67,26 @@
 
 #pragma mark - Navigation
 
+- (IBAction)emailButtonPushed:(id)sender
+{
+    
+    if([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+        mailCont.mailComposeDelegate = self;
+        [mailCont setToRecipients:[NSArray arrayWithObject:self.person.email]];
+        [mailCont setSubject:@"Hello!"];
+        [mailCont setMessageBody:@"\n\nSend from FactoryApp" isHTML:NO];
+        [self presentViewController:mailCont animated:YES completion:nil];
+    }
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    //handle any error
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

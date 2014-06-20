@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "Member.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface MemberDetailViewController : UIViewController
+@interface MemberDetailViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) Member *person;
 
