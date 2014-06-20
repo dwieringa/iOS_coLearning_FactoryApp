@@ -82,7 +82,7 @@
         WebViewController *vc = segue.destinationViewController;
         
         // Pass the needed URL to the new view controller.
-        NSString *urlString = [NSString stringWithFormat:@"http://facebook.com/profile.php?id=%@",self.person.fb];
+        NSString *urlString = [NSString stringWithFormat:@"http://facebook.com/%@",self.person.fb];
         vc.url = [NSURL URLWithString:urlString];
     }
 }
