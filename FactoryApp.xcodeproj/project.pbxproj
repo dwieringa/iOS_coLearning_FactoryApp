@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550B51E11953D92B00B531CA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E01953D92B00B531CA /* WebViewController.m */; };
+		550B51E419548FBC00B531CA /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E319548FBC00B531CA /* JoinViewController.m */; };
 		553C042E19354B100088A5E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042D19354B100088A5E9 /* Foundation.framework */; };
 		553C043019354B100088A5E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042F19354B100088A5E9 /* CoreGraphics.framework */; };
 		553C043219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		553C045219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
 		553C045A19354B100088A5E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553C045819354B100088A5E9 /* InfoPlist.strings */; };
 		553C045C19354B100088A5E9 /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 553C045B19354B100088A5E9 /* FactoryAppTests.m */; };
-		557179CA194F7B68003F8A19 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557179C9194F7B68003F8A19 /* JoinViewController.m */; };
 		557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557179CC194F8B05003F8A19 /* SpaceViewController.m */; };
 		55717A251951F3AF003F8A19 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55717A241951F3AF003F8A19 /* CoreText.framework */; };
 		55717A271951F3B9003F8A19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55717A261951F3B9003F8A19 /* QuartzCore.framework */; };
@@ -51,6 +51,8 @@
 /* Begin PBXFileReference section */
 		550B51DF1953D92B00B531CA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		550B51E01953D92B00B531CA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		550B51E219548FBC00B531CA /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinViewController.h; sourceTree = "<group>"; };
+		550B51E319548FBC00B531CA /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
 		5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
 		553C042A19354B100088A5E9 /* FactoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C042D19354B100088A5E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,8 +74,6 @@
 		553C045719354B100088A5E9 /* FactoryAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FactoryAppTests-Info.plist"; sourceTree = "<group>"; };
 		553C045919354B100088A5E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		553C045B19354B100088A5E9 /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
-		557179C8194F7B68003F8A19 /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinViewController.h; path = ../JoinViewController.h; sourceTree = "<group>"; };
-		557179C9194F7B68003F8A19 /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinViewController.m; path = ../JoinViewController.m; sourceTree = "<group>"; };
 		557179CB194F8B05003F8A19 /* SpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceViewController.h; sourceTree = "<group>"; };
 		557179CC194F8B05003F8A19 /* SpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceViewController.m; sourceTree = "<group>"; };
 		55717A241951F3AF003F8A19 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -172,10 +172,10 @@
 				559B99B21947539E00907493 /* MemberTableViewController.m */,
 				559B99B41947B3F300907493 /* MemberDetailViewController.h */,
 				559B99B51947B3F300907493 /* MemberDetailViewController.m */,
-				557179C8194F7B68003F8A19 /* JoinViewController.h */,
-				557179C9194F7B68003F8A19 /* JoinViewController.m */,
 				550B51DF1953D92B00B531CA /* WebViewController.h */,
 				550B51E01953D92B00B531CA /* WebViewController.m */,
+				550B51E219548FBC00B531CA /* JoinViewController.h */,
+				550B51E319548FBC00B531CA /* JoinViewController.m */,
 				557179CB194F8B05003F8A19 /* SpaceViewController.h */,
 				557179CC194F8B05003F8A19 /* SpaceViewController.m */,
 				553C044819354B100088A5E9 /* Images.xcassets */,
@@ -377,13 +377,13 @@
 			files = (
 				553C043E19354B100088A5E9 /* FactoryAppDelegate.m in Sources */,
 				550B51E11953D92B00B531CA /* WebViewController.m in Sources */,
+				550B51E419548FBC00B531CA /* JoinViewController.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
 				559B99AF194748FC00907493 /* Member.m in Sources */,
 				557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */,
 				559B99B31947539E00907493 /* MemberTableViewController.m in Sources */,
 				559B99B61947B3F300907493 /* MemberDetailViewController.m in Sources */,
 				553C044719354B100088A5E9 /* FactoryAppViewController.m in Sources */,
-				557179CA194F7B68003F8A19 /* JoinViewController.m in Sources */,
 				559B99B0194748FC00907493 /* MemberDatastore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
