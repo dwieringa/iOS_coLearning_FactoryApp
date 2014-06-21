@@ -11,5 +11,5 @@
 @interface FactoryAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic) BOOL justLaunched;
 @end

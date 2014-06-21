@@ -299,10 +299,10 @@ Grand Rapids, MI 49503</string>
             </objects>
             <point key="canvasLocation" x="1489" y="1359"/>
         </scene>
-        <!--View Controller - Menu-->
+        <!--Menu View Controller - Menu-->
         <scene sceneID="gBX-Ky-vdt">
             <objects>
-                <viewController id="oyn-EJ-LDY" sceneMemberID="viewController">
+                <viewController id="oyn-EJ-LDY" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VUL-rh-xVp"/>
                         <viewControllerLayoutGuide type="bottom" id="sL5-jD-voq"/>
@@ -322,7 +322,7 @@ Grand Rapids, MI 49503</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="JRH-wD-kZl" kind="push" id="QKj-iJ-YGo"/>
+                                            <segue destination="JRH-wD-kZl" kind="push" identifier="MeetSegue" id="QKj-iJ-YGo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-aY-Uay">
