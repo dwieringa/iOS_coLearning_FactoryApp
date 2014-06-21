@@ -42,10 +42,20 @@
     
     FactoryAppDelegate *appDelegate = (FactoryAppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    // hide navigation bar on menu page per design
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+
     if (appDelegate.justLaunched) {
         [self performSegueWithIdentifier: @"MeetSegue" sender: self];
         appDelegate.justLaunched = NO;
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+    // unhide navigation bar for other pages per design
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
 }
 
 - (void)didReceiveMemoryWarning
