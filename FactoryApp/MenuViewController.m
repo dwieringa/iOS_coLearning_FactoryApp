@@ -30,10 +30,9 @@
     // Do any additional setup after loading the view.
 
     // change Back button to hamburger
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"testburger"]];
     self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
-
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"testburger"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated

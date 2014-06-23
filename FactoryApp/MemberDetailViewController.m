@@ -37,6 +37,12 @@
     [self.askMeAbout sizeToFit];
     self.aboutMember.text = self.person.bio;
     [self.aboutMember sizeToFit];
+    
+    // restore the Navigation Bar back button to it's default state
+    [self.navigationController.navigationBar setBackIndicatorImage:nil];
+    self.navigationController.navigationBar.tintColor = nil;
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:nil];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
