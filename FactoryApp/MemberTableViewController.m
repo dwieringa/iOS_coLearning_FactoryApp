@@ -74,11 +74,15 @@
     Member *member = [datastore recordAtIndex:indexPath.row];
     cell.textLabel.text = member.name;
     cell.imageView.image = member.pic;
-//    cell.imageView.frame = CGRectMake(0, 0, 10, 10);
-//    cell.imageView.contentMode = UIViewContentModeCenter;
     cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
-//    NSLog(@"size: width = %f   height= %f",cell.imageView.frame.size.width, cell.imageView.frame.size.height);
     cell.imageView.clipsToBounds = YES;
+    
+    if(indexPath.row % 2 == 0) {
+        cell.backgroundColor = [UIColor colorWithRed:0.957 green:0.961 blue:0.965 alpha:1] /*#f4f5f6*/;
+    } else {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+    
     return cell;
 }
 
