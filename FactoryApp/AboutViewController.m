@@ -36,9 +36,9 @@
     [super viewWillAppear:animated];
     
     // change Back button to hamburger per design TODO: move this to superclass
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"testburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"testburger"]];
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
+    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
 }
 
 - (void)didReceiveMemoryWarning

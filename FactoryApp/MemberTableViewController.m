@@ -43,9 +43,9 @@
     [super viewWillAppear:animated];
 
     // change Back button to hamburger per design TODO: move this to superclass
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"testburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"testburger"]];
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
+    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
 
 }
 - (void)didReceiveMemoryWarning
@@ -54,7 +54,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view data source/Users/dave/Downloads/All_Devices.mobileprovision
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
