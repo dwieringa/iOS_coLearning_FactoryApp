@@ -19,6 +19,7 @@
 @property NSString *twitter;
 @property NSURL *picURL;
 @property (readonly) UIImage *pic;
+@property UIImage *thumbnail;
 
 - (id)initWithDictionary:(NSDictionary *)properties;
 

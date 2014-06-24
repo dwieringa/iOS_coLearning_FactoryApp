@@ -76,16 +76,34 @@
     [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:20]];
     cell.textLabel.textColor = [UIColor colorWithRed:236.0/255.0 green:172.0/255.0 blue:0 alpha:1];
 
-    cell.imageView.image = member.pic;
-    cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
-    cell.imageView.clipsToBounds = YES;
-    
     if(indexPath.row % 2 == 0) {
         cell.backgroundColor = [UIColor colorWithRed:0.957 green:0.961 blue:0.965 alpha:1] /*#f4f5f6*/;
     } else {
         cell.backgroundColor = [UIColor whiteColor];
     }
+
+    cell.imageView.image = member.thumbnail;
+    cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
+    cell.imageView.clipsToBounds = YES;
     
+    // if the image hasn't been downloaded yet, do so in a background thread and update the table when complete
+    if (cell.imageView.image == nil) {
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
+            member.thumbnail = member.pic; // the download happens here
+            //TODO: actually create a smaller/scaled thumbnail.
+            
+            // update the TableViewCell in the main thread if the user hasn't scrolled off the screen
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                if ([self.tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
+                    [self.tableView beginUpdates];
+                    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                    [self.tableView endUpdates];
+                }
+            });
+        });
+    }
+
     return cell;
 }
 
