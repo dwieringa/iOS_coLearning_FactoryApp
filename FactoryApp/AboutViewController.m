@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+@import MapKit;
 
 @interface AboutViewController ()
 
@@ -48,6 +49,17 @@
 }
 
 - (IBAction)visitUsPressed:(id)sender {
+    CLLocationCoordinate2D theFactoryLocation = CLLocationCoordinate2DMake(42.963099, -85.669536);
+    MKPlacemark* place = [[MKPlacemark alloc] initWithCoordinate: theFactoryLocation addressDictionary: nil];
+    MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];
+    destination.name = @"The Factory";
+    destination.url = [NSURL URLWithString:@"http://www.workthefactory.com"];
+    destination.phoneNumber = @"616.379.9377";
+    NSArray* items = [[NSArray alloc] initWithObjects: destination, nil];
+    NSDictionary* options = [[NSDictionary alloc] initWithObjectsAndKeys:
+                             MKLaunchOptionsDirectionsModeDriving,
+                             MKLaunchOptionsDirectionsModeKey, nil];
+    [MKMapItem openMapsWithItems: items launchOptions: options];
 }
 
 /*
