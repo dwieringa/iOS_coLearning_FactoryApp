@@ -761,7 +761,7 @@ Grand Rapids, MI 49503</string>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
-        <image name="hamburger-gold" width="67" height="67"/>
+        <image name="hamburger-gold" width="60" height="60"/>
         <image name="join-active-dark" width="411" height="101"/>
         <image name="meet-active-dark" width="411" height="101"/>
         <image name="open space-blurred" width="641" height="1013"/>
