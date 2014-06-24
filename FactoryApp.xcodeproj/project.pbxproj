@@ -10,6 +10,7 @@
 		550B51E11953D92B00B531CA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E01953D92B00B531CA /* WebViewController.m */; };
 		550B51E419548FBC00B531CA /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E319548FBC00B531CA /* JoinViewController.m */; };
 		550B51E7195502FD00B531CA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E6195502FD00B531CA /* MenuViewController.m */; };
+		550B51EA1958F64300B531CA /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550B51E91958F64300B531CA /* AboutViewController.m */; };
 		553C042E19354B100088A5E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042D19354B100088A5E9 /* Foundation.framework */; };
 		553C043019354B100088A5E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C042F19354B100088A5E9 /* CoreGraphics.framework */; };
 		553C043219354B100088A5E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C043119354B100088A5E9 /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		550B51E319548FBC00B531CA /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
 		550B51E5195502FD00B531CA /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		550B51E6195502FD00B531CA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		550B51E81958F64300B531CA /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		550B51E91958F64300B531CA /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
 		553C042A19354B100088A5E9 /* FactoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C042D19354B100088A5E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +171,8 @@
 				553C044219354B100088A5E9 /* Main_iPad.storyboard */,
 				550B51E5195502FD00B531CA /* MenuViewController.h */,
 				550B51E6195502FD00B531CA /* MenuViewController.m */,
+				550B51E81958F64300B531CA /* AboutViewController.h */,
+				550B51E91958F64300B531CA /* AboutViewController.m */,
 				559B99B11947539E00907493 /* MemberTableViewController.h */,
 				559B99B21947539E00907493 /* MemberTableViewController.m */,
 				559B99B41947B3F300907493 /* MemberDetailViewController.h */,
@@ -383,6 +388,7 @@
 				557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */,
 				559B99B31947539E00907493 /* MemberTableViewController.m in Sources */,
 				559B99B61947B3F300907493 /* MemberDetailViewController.m in Sources */,
+				550B51EA1958F64300B531CA /* AboutViewController.m in Sources */,
 				550B51E7195502FD00B531CA /* MenuViewController.m in Sources */,
 				559B99B0194748FC00907493 /* MemberDatastore.m in Sources */,
 			);
