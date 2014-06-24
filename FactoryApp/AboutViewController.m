@@ -81,7 +81,9 @@
 
 - (IBAction)callUsPressed:(id)sender
 {
-    //TODO: implement phone dialing
+    //TODO: check for dialing support on device
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://616-379-9377"]];
 }
 
 - (IBAction)visitUsPressed:(id)sender {
