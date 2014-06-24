@@ -73,6 +73,9 @@
     // Configure the cell...
     Member *member = [datastore recordAtIndex:indexPath.row];
     cell.textLabel.text = member.name;
+    [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:20]];
+    cell.textLabel.textColor = [UIColor colorWithRed:236.0/255.0 green:172.0/255.0 blue:0 alpha:1];
+
     cell.imageView.image = member.pic;
     cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
     cell.imageView.clipsToBounds = YES;
