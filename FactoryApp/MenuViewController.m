@@ -28,11 +28,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    // change Back button to hamburger
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"testburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"testburger"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,10 +39,17 @@
     // hide navigation bar on menu page per design
     [self.navigationController setNavigationBarHidden:YES];   //it hides
 
+    // if app just launch, automagically push to the Meet page per design/prototype
     if (appDelegate.justLaunched) {
         [self performSegueWithIdentifier: @"MeetSegue" sender: self];
         appDelegate.justLaunched = NO;
     }
+    
+    // change Back button to hamburger per design TODO: move this to superclass
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"testburger"]];
+    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"testburger"]];
+
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

@@ -344,6 +344,10 @@ Grand Rapids, MI 49503</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="6HL-Gz-J33"/>
+                    <connections>
+                        <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="4qH-Pt-Xx3"/>
+                        <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="37d-fH-ZdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOz-LB-Zyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -602,7 +606,7 @@ Grand Rapids, MI 49503</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9K0-Vc-PxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="-414"/>
+            <point key="canvasLocation" x="1983" y="1318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W73-cx-GRf">
@@ -652,6 +656,6 @@ Grand Rapids, MI 49503</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iHA-hD-BQf"/>
+        <segue reference="37d-fH-ZdA"/>
     </inferredMetricsTieBreakers>
 </document>
