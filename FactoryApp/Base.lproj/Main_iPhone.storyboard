@@ -149,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SPACE" id="1px-2w-apK"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="wER-4z-h08" id="Slz-Fw-daO"/>
                         <outlet property="leftImageView" destination="rNc-eQ-pe9" id="PDJ-EO-KBX"/>
                         <outlet property="mainImageView" destination="Cro-Dn-XJz" id="tZK-e7-ePR"/>
                         <outlet property="rightImageView" destination="CYQ-NV-qO1" id="Pt2-ur-8v4"/>

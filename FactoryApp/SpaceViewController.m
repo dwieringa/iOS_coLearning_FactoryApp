@@ -10,9 +10,11 @@
 
 @interface SpaceViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
 @property (strong, nonatomic, readonly) NSArray *photos;
+@property (strong, nonatomic, readonly) NSArray *descriptions;
 @property (nonatomic) NSInteger selectedImageIndex;
 
 @end
@@ -35,11 +37,25 @@
                              [UIImage imageNamed:@"kitchen-clear"],
                              [UIImage imageNamed:@"meeting room-clear"],
                              [UIImage imageNamed:@"open space-clear"],
-                             [UIImage imageNamed:@"open space-blurred"],
+                             //[UIImage imageNamed:@"open space-blurred"],
                              [UIImage imageNamed:@"open space 2-clear"],
                              [UIImage imageNamed:@"skype room-clear"],
                              nil];
     return _photos;
+}
+
+@synthesize descriptions = _descriptions;
+- (NSArray *)descriptions
+{
+    if (!_descriptions) _descriptions = [NSArray arrayWithObjects:
+                                         [NSString stringWithFormat:@"Kitchen"],
+                                         [NSString stringWithFormat:@"Meeting Room"],
+                                         [NSString stringWithFormat:@"Open Space"],
+                                         //[NSString stringWithFormat:@"open space-blurred"],
+                                         [NSString stringWithFormat:@"Open Space 2"],
+                                         [NSString stringWithFormat:@"Skype Room"],
+                                         nil];
+    return _descriptions;
 }
 
 - (void)setSelectedImageIndex:(NSInteger)imageIndex
@@ -49,6 +65,7 @@
     if (_selectedImageIndex >= self.photos.count) _selectedImageIndex = 0;
     
     self.mainImageView.image = self.photos[_selectedImageIndex];
+    self.descriptionLabel.text = [self.descriptions[_selectedImageIndex] uppercaseString];
 
     // load left image view
     if (_selectedImageIndex == 0) {
