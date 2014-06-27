@@ -9,7 +9,13 @@
 #import "MemberDetailViewController.h"
 #import "WebViewController.h"
 
-@interface MemberDetailViewController ()
+@interface MemberDetailViewController () {
+    NSURL *twitterAppURL;
+    NSURL *twitterWebURL;
+    NSURL *facebookAppURL;
+    NSURL *facebookWebURL;
+}
+
 @property IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *askMeAbout;
@@ -38,6 +44,11 @@
     self.aboutMember.text = self.person.bio;
     [self.aboutMember sizeToFit];
     
+    twitterAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",self.person.twitter]];
+    twitterWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter]];
+    facebookAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"fb://profile/%@",self.person.fb]];
+    facebookWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://facebook.com/%@",self.person.fb]];
+
     // restore the Navigation Bar back button to it's default state
     [self.navigationController.navigationBar setBackIndicatorImage:nil];
     self.navigationController.navigationBar.tintColor = nil;
@@ -60,20 +71,26 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)twitterButtonPressed:(id)sender {
+    if ([[UIApplication sharedApplication] canOpenURL:twitterAppURL]) {
+        [[UIApplication sharedApplication] openURL:twitterAppURL];
+    } else {
+        [self performSegueWithIdentifier: @"showTwitterSegue" sender: self];
+    }
+}
+
+- (IBAction)facebookButtonPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([[UIApplication sharedApplication] canOpenURL:facebookAppURL]) {
+        NSLog(@"Launching Facebook app");
+        [[UIApplication sharedApplication] openURL:facebookAppURL];
+    } else {
+        NSLog(@"Launching Facebook webview");
+        [self performSegueWithIdentifier: @"showFacebookSegue" sender: self];
+    }
 }
 
-- (void)setPerson:(Member *)person {
-    _person = person;
-}
-
-
-#pragma mark - Navigation
-
-- (IBAction)emailButtonPushed:(id)sender
+- (IBAction)emailButtonPressed:(id)sender
 {
     
     if([MFMailComposeViewController canSendMail]) {
@@ -86,6 +103,19 @@
     }
     
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)setPerson:(Member *)person {
+    _person = person;
+}
+
+
+#pragma mark - Navigation
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
@@ -101,15 +131,13 @@
         WebViewController *vc = segue.destinationViewController;
         
         // Pass the needed URL to the new view controller.
-        NSString *urlString = [NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter];
-        vc.url = [NSURL URLWithString:urlString];
+        vc.url = twitterWebURL;
     } else if ([[segue identifier] isEqualToString:@"showFacebookSegue"]) {
         // Get the new view controller using [segue destinationViewController].
         WebViewController *vc = segue.destinationViewController;
         
         // Pass the needed URL to the new view controller.
-        NSString *urlString = [NSString stringWithFormat:@"http://facebook.com/%@",self.person.fb];
-        vc.url = [NSURL URLWithString:urlString];
+        vc.url = facebookWebURL;
     }
 }
 

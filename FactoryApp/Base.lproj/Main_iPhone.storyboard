@@ -585,17 +585,17 @@ Grand Rapids, MI 49503</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="emailButtonPushed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="8md-3O-u3E"/>
+                                            <action selector="emailButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="K0b-B2-hbB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
-                                        <rect key="frame" x="66" y="268" width="50" height="50"/>
+                                        <rect key="frame" x="66" y="267" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="twitter">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="MyA-7L-Xwg"/>
+                                            <action selector="twitterButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="AxK-5v-msj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-jC-CGJ" userLabel="Facebook Button">
@@ -605,7 +605,7 @@ Grand Rapids, MI 49503</string>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="iHA-hD-BQf"/>
+                                            <action selector="facebookButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="bvC-p4-WBU"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj">
@@ -642,7 +642,7 @@ Grand Rapids, MI 49503</string>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="emailButtonPushed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="ixL-8M-fBN"/>
+                                                    <action selector="emailButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="PHi-OO-PjF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -693,6 +693,8 @@ Grand Rapids, MI 49503</string>
                         <outlet property="askMeAbout" destination="0KQ-tk-u02" id="ajK-aL-GgH"/>
                         <outlet property="nameLabel" destination="Bu9-r7-Sr4" id="ziW-0h-8ij"/>
                         <outlet property="photoImageView" destination="98E-Z7-gx4" id="UDd-EY-tvH"/>
+                        <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="0fr-m6-rcd"/>
+                        <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="ph4-Ax-rjm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAi-IE-Qnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -726,7 +728,7 @@ Grand Rapids, MI 49503</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9K0-Vc-PxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="1318"/>
+            <point key="canvasLocation" x="2235" y="630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W73-cx-GRf">
@@ -761,7 +763,7 @@ Grand Rapids, MI 49503</string>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
-        <image name="hamburger-gold" width="60" height="60"/>
+        <image name="hamburger-gold" width="67" height="67"/>
         <image name="join-active-dark" width="411" height="101"/>
         <image name="meet-active-dark" width="411" height="101"/>
         <image name="open space-blurred" width="641" height="1013"/>
@@ -776,6 +778,6 @@ Grand Rapids, MI 49503</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iHA-hD-BQf"/>
+        <segue reference="ph4-Ax-rjm"/>
     </inferredMetricsTieBreakers>
 </document>

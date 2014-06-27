@@ -10,7 +10,12 @@
 #import "WebViewController.h"
 @import MapKit;
 
-@interface AboutViewController ()
+@interface AboutViewController () {
+    NSURL *twitterAppURL;
+    NSURL *twitterWebURL;
+    NSURL *facebookAppURL;
+    NSURL *facebookWebURL;
+}
 
 @end
 
@@ -28,7 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    twitterAppURL = [NSURL URLWithString:@"twitter://user?screen_name=coFactory"];
+    twitterWebURL = [NSURL URLWithString:@"http://twitter.com/coFactory"];
+    facebookAppURL = [NSURL URLWithString:@"fb://profile/159022818166"];
+    facebookWebURL = [NSURL URLWithString:@"http://facebook.com/coFactory"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,16 +58,21 @@
 
 - (IBAction)twitterButtonPressed:(UIButton *)sender
 {
-    //TODO: check for Twitter app installation and use it if possible
+    if ([[UIApplication sharedApplication] canOpenURL:twitterAppURL]) {
+        [[UIApplication sharedApplication] openURL:twitterAppURL];
+    } else {
+        [self performSegueWithIdentifier: @"showTwitterSegue" sender: self];
+    }
 
-    [self performSegueWithIdentifier: @"showTwitterSegue" sender: self];
 }
 
 - (IBAction)facebookButtonPressed:(id)sender
 {
-    //TODO: check for Facebook app installation and use it if possible
-    
-    [self performSegueWithIdentifier: @"showFacebookSegue" sender: self];
+    if ([[UIApplication sharedApplication] canOpenURL:facebookAppURL]) {
+        [[UIApplication sharedApplication] openURL:facebookAppURL];
+    } else {
+        [self performSegueWithIdentifier: @"showFacebookSegue" sender: self];
+    }
 }
 
 - (IBAction)emailUsPressed:(id)sender
@@ -110,15 +124,13 @@
         WebViewController *vc = segue.destinationViewController;
         
         // Pass the needed URL to the new view controller.
-        NSString *urlString = [NSString stringWithFormat:@"http://twitter.com/cofactory"];
-        vc.url = [NSURL URLWithString:urlString];
+        vc.url = twitterWebURL;
     } else if ([[segue identifier] isEqualToString:@"showFacebookSegue"]) {
         // Get the new view controller using [segue destinationViewController].
         WebViewController *vc = segue.destinationViewController;
         
         // Pass the needed URL to the new view controller.
-        NSString *urlString = [NSString stringWithFormat:@"http://facebook.com/coFactory"];
-        vc.url = [NSURL URLWithString:urlString];
+        vc.url = facebookWebURL;
     }
 
     // restore the Navigation Bar back button to it's default state
