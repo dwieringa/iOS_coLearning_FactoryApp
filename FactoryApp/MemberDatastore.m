@@ -10,7 +10,7 @@
 #import "Member.h"
 
 @interface MemberDatastore () {
-    NSMutableArray *_members;
+    NSArray *_members;
     NSURLConnection *connection;
     NSMutableData *jsonData;
 }
@@ -28,10 +28,13 @@
         NSData *theData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         NSDictionary *allMembers = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:theData options:0 error:nil];
         
-        _members = [NSMutableArray array];
+        NSMutableArray *memberArray = [NSMutableArray array];
         for (NSDictionary *memberDictionary in allMembers[@"results"]) {
-            [_members addObject:[[Member alloc] initWithDictionary:memberDictionary]];
+            [memberArray addObject:[[Member alloc] initWithDictionary:memberDictionary]];
         }
+        
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+        _members=[memberArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     }
     
     return self;
