@@ -10,7 +10,7 @@
 #import "Member.h"
 
 @interface MemberDatastore () {
-    NSMutableArray *members;
+    NSMutableArray *_members;
     NSURLConnection *connection;
     NSMutableData *jsonData;
 }
@@ -28,9 +28,9 @@
         NSData *theData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
         NSDictionary *allMembers = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:theData options:0 error:nil];
         
-        members = [NSMutableArray array];
+        _members = [NSMutableArray array];
         for (NSDictionary *memberDictionary in allMembers[@"results"]) {
-            [members addObject:[[Member alloc] initWithDictionary:memberDictionary]];
+            [_members addObject:[[Member alloc] initWithDictionary:memberDictionary]];
         }
     }
     
@@ -61,19 +61,24 @@
                                         @"NAME": @"Ron VanSurksum",
                                         @"TWITTER": @"",
                                         @"pic": @""};
-        members = [@[[[Member alloc] initWithDictionary:trentonDictionary],
+        _members = [@[[[Member alloc] initWithDictionary:trentonDictionary],
                      [[Member alloc] initWithDictionary:garrickDictionary],
                      [[Member alloc] initWithDictionary:ronDictionary]] mutableCopy];
     }
     return self;
 }
 
+- (NSArray *)members
+{
+    return _members;
+}
+
 - (NSUInteger)count {
-    return [members count];
+    return [self.members count];
 }
 
 - (Member *)recordAtIndex:(NSUInteger)index {
-    return members[index];
+    return self.members[index];
 }
 
 @end

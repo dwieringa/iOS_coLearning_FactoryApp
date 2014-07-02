@@ -14,5 +14,6 @@
 - (id)initWithTestData;
 - (NSUInteger)count;
 - (Member *)recordAtIndex:(NSUInteger)index;
+@property (nonatomic, readonly)NSArray *members;
 
 @end

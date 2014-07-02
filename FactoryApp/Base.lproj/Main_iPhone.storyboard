@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" userInteractionEnabled="NO" contentMode="redraw" id="zyd-73-6pf">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="zyd-73-6pf">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -763,7 +763,7 @@ Grand Rapids, MI 49503</string>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
-        <image name="hamburger-gold" width="67" height="67"/>
+        <image name="hamburger-gold" width="30" height="30"/>
         <image name="join-active-dark" width="411" height="101"/>
         <image name="meet-active-dark" width="411" height="101"/>
         <image name="open space-blurred" width="641" height="1013"/>

@@ -18,6 +18,10 @@
 @end
 
 @implementation MemberTableViewController
+{
+    NSArray *recipes;
+    NSArray *searchResults;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -54,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source/Users/dave/Downloads/All_Devices.mobileprovision
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -63,15 +67,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [datastore count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+        
+    } else {
+        return [datastore count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"memberCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"memberCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    Member *member = [datastore recordAtIndex:indexPath.row];
+    Member *member = nil;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        member = [searchResults objectAtIndex:indexPath.row];
+    } else {
+        member = [datastore recordAtIndex:indexPath.row];
+    }
     cell.textLabel.text = member.name;
     [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:20]];
     cell.textLabel.textColor = [UIColor colorWithRed:236.0/255.0 green:172.0/255.0 blue:0 alpha:1];
@@ -105,6 +119,22 @@
     }
 
     return cell;
+}
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    searchResults = [datastore.members filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
 }
 
 /*
@@ -155,8 +185,17 @@
         MemberDetailViewController *vc = segue.destinationViewController;
 
         // Pass the selected object to the new view controller.
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Member *person = [datastore recordAtIndex:indexPath.row];
+        NSIndexPath *indexPath = nil;
+        Member *person = nil;
+
+        if (self.searchDisplayController.active) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            person = [searchResults objectAtIndex:indexPath.row];
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            person = [datastore recordAtIndex:indexPath.row];
+        }
+
         vc.person = person;
     }
 }
