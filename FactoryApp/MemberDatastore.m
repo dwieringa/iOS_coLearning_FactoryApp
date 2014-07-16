@@ -26,15 +26,21 @@
         [request setValue:@"hwz7WjcntmkHEphq0JazkvX1WoN4jcLi3IKo5UbY" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
         
         NSData *theData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSDictionary *allMembers = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:theData options:0 error:nil];
-        
-        NSMutableArray *memberArray = [NSMutableArray array];
-        for (NSDictionary *memberDictionary in allMembers[@"results"]) {
-            [memberArray addObject:[[Member alloc] initWithDictionary:memberDictionary]];
+        if (theData == nil) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Internet Connection Problem" message:@"Member information cannot be obtained at this time." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            [alert show];
+        } else {
+            
+            NSDictionary *allMembers = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:theData options:0 error:nil];
+            
+            NSMutableArray *memberArray = [NSMutableArray array];
+            for (NSDictionary *memberDictionary in allMembers[@"results"]) {
+                [memberArray addObject:[[Member alloc] initWithDictionary:memberDictionary]];
+            }
+            
+            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+            _members=[memberArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
         }
-        
-        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-        _members=[memberArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
     }
     
     return self;
@@ -82,6 +88,12 @@
 
 - (Member *)recordAtIndex:(NSUInteger)index {
     return self.members[index];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        // alert acknowledged
+    }
 }
 
 @end

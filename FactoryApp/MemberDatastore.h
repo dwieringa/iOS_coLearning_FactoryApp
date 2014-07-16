@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Member.h"
 
-@interface MemberDatastore : NSObject
+@interface MemberDatastore : NSObject <UIAlertViewDelegate>
 
 - (id)initWithTestData;
 - (NSUInteger)count;
