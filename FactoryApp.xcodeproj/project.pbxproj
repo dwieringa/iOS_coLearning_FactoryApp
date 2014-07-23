@@ -298,6 +298,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Userwise Solutions";
 				TargetAttributes = {
+					553C042919354B100088A5E9 = {
+						DevelopmentTeam = A3AVF64FX3;
+					};
 					553C044D19354B100088A5E9 = {
 						TestTargetID = 553C042919354B100088A5E9;
 					};
@@ -528,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

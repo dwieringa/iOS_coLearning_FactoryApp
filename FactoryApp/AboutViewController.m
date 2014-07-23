@@ -97,7 +97,17 @@
 {
     //TODO: check for dialing support on device
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://616-379-9377"]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Call The Factory" message:@"Would you like to call The Factory now or copy the number?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: @"Call", @"Copy", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://616-379-9377"]];
+    } else if (buttonIndex == 2) {
+        [UIPasteboard generalPasteboard].string = @"616-379-9377";
+    }
 }
 
 - (IBAction)visitUsPressed:(id)sender {
