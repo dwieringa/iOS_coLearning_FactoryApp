@@ -61,6 +61,13 @@
     [self.navigationController setNavigationBarHidden:YES];   //it hides
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    // handle nav bar hiding for the case when coming from Search results.  The search bar from the previous page seems to unhide the navigation bar after viewWillAppear is called on this viewcontroller
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];    // it shows
