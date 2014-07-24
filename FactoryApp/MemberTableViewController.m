@@ -109,10 +109,10 @@
             
             // update the TableViewCell in the main thread if the user hasn't scrolled off the screen
             dispatch_sync(dispatch_get_main_queue(), ^{
-                if ([self.tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
-                    [self.tableView beginUpdates];
-                    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-                    [self.tableView endUpdates];
+                if ([tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
+                    [tableView beginUpdates];
+                    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                    [tableView endUpdates];
                 }
             });
         });
