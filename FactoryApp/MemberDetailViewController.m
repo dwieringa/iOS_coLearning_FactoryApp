@@ -41,8 +41,27 @@
     self.photoImageView.image = self.person.pic;
     self.askMeAbout.text = self.person.ama;
     [self.askMeAbout sizeToFit];
-    self.aboutMember.text = self.person.bio;
-    [self.aboutMember sizeToFit];
+    
+    if (![self.person.bio  isEqual: @""] && [self.aboutMember respondsToSelector:@selector(setAttributedText:)])
+    {    // fill about text in attributed fashion
+        
+        NSArray *nameParts = [self.person.name componentsSeparatedByString:@" "];
+        NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", [nameParts objectAtIndex:0]];
+        NSRange rangeOfBold = NSMakeRange(0, aboutText.length);
+        [aboutText appendString:self.person.bio];
+
+        UIFont *regularFont = [UIFont fontWithName:@"HelveticaNeue" size:14];
+        UIFont *boldFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
+        NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:regularFont, NSFontAttributeName, nil];
+        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:aboutText attributes:attrs];
+        
+        [attributedText setAttributes:[NSDictionary dictionaryWithObjectsAndKeys: boldFont, NSFontAttributeName, nil] range:rangeOfBold];
+        
+        [self.aboutMember setAttributedText:attributedText];
+    } else {
+        self.aboutMember.text = self.person.bio;
+        [self.aboutMember sizeToFit];
+    }
     
     twitterAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",self.person.twitter]];
     twitterWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter]];
