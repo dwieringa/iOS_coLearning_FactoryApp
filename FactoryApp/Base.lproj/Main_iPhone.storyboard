@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mqh-eY-NBn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UzC-ZZ-C8S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -48,8 +48,11 @@
                             <outlet property="delegate" destination="JRH-wD-kZl" id="y6C-oh-2Ti"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meet" id="rE7-ea-9Lb"/>
+                    <navigationItem key="navigationItem" title="Meet" id="rE7-ea-9Lb">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="kHK-zH-yoH"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="menuButton" destination="kHK-zH-yoH" id="Bgv-Zr-NVT"/>
                         <outlet property="searchDisplayController" destination="6B4-qt-q08" id="vec-Ie-Myn"/>
                     </connections>
                 </tableViewController>
@@ -86,8 +89,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Join" id="OTx-ka-rRw"/>
+                    <navigationItem key="navigationItem" title="Join" id="OTx-ka-rRw">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="YBK-4v-ob9"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="menuButton" destination="YBK-4v-ob9" id="Dxi-9P-vWL"/>
                         <outlet property="webView" destination="Gc7-FF-ITS" id="s5w-7Y-Fv4"/>
                     </connections>
                 </viewController>
@@ -111,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="336" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cro-Dn-XJz" userLabel="Main Image View">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cro-Dn-XJz" userLabel="Main Image View">
                                 <rect key="frame" x="40" y="95" width="240" height="410"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -131,14 +138,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-NV-qO1" userLabel="Right Image View">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYQ-NV-qO1" userLabel="Right Image View">
                                 <rect key="frame" x="290" y="95" width="240" height="410"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="plz-u9-1hH"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-eQ-pe9" userLabel="Left Image View">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNc-eQ-pe9" userLabel="Left Image View">
                                 <rect key="frame" x="-210" y="95" width="240" height="410"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -167,11 +174,15 @@
                             <constraint firstItem="Cro-Dn-XJz" firstAttribute="centerX" secondItem="wER-4z-h08" secondAttribute="centerX" id="w0v-ih-jim"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SPACE" id="1px-2w-apK"/>
+                    <navigationItem key="navigationItem" title="SPACE" id="1px-2w-apK">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="iqs-Zd-GpE"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="wER-4z-h08" id="Slz-Fw-daO"/>
                         <outlet property="leftImageView" destination="rNc-eQ-pe9" id="PDJ-EO-KBX"/>
                         <outlet property="mainImageView" destination="Cro-Dn-XJz" id="tZK-e7-ePR"/>
+                        <outlet property="menuButton" destination="iqs-Zd-GpE" id="ieM-xH-1m6"/>
                         <outlet property="rightImageView" destination="CYQ-NV-qO1" id="Pt2-ur-8v4"/>
                     </connections>
                 </viewController>
@@ -463,8 +474,12 @@ Grand Rapids, MI 49503</string>
                             <constraint firstItem="X2u-r3-DbT" firstAttribute="leading" secondItem="yRu-3E-p81" secondAttribute="leading" id="Rgu-H2-ryO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="6HL-Gz-J33"/>
+                    <navigationItem key="navigationItem" title="About" id="6HL-Gz-J33">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="EPy-w2-0W5"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="menuButton" destination="EPy-w2-0W5" id="CFd-2P-Jbo"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="4qH-Pt-Xx3"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="37d-fH-ZdA"/>
                     </connections>
@@ -485,62 +500,48 @@ Grand Rapids, MI 49503</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jro-2L-dJH">
-                                <rect key="frame" x="0.0" y="0.0" width="207" height="568"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-fK-KRb">
+                                <rect key="frame" x="0.0" y="20" width="207" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-fK-KRb">
-                                        <rect key="frame" x="0.0" y="20" width="207" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="meet-active-dark">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="JRH-wD-kZl" kind="push" identifier="MeetSegue" id="QKj-iJ-YGo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-aY-Uay">
-                                        <rect key="frame" x="0.0" y="78" width="207" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="join-active-dark">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="YhP-ev-sga" kind="push" id="C9V-3J-ZU8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-J3-kY9">
-                                        <rect key="frame" x="0.0" y="137" width="207" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="space-active-dark">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="piJ-Xy-2bX" kind="push" id="Ubc-6F-sbr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q85-Su-C3s">
-                                        <rect key="frame" x="0.0" y="195" width="207" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="about-active-dark">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="yX7-F7-Tzd" kind="push" id="WuQ-j4-gUB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p06-Tu-qJ6">
-                                <rect key="frame" x="215" y="28" width="36" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="hamburger-gold">
+                                <state key="normal" image="meet-active-dark">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JRH-wD-kZl" kind="custom" identifier="memberListSegue" customClass="SWRevealViewControllerSegue" id="2Qv-76-CA6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6q-aY-Uay">
+                                <rect key="frame" x="0.0" y="78" width="207" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="join-active-dark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YhP-ev-sga" kind="custom" customClass="SWRevealViewControllerSegue" id="ZpY-fC-RDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-J3-kY9">
+                                <rect key="frame" x="0.0" y="137" width="207" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="space-active-dark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="piJ-Xy-2bX" kind="custom" customClass="SWRevealViewControllerSegue" id="BlL-eF-BPm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q85-Su-C3s">
+                                <rect key="frame" x="0.0" y="196" width="207" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="about-active-dark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yX7-F7-Tzd" kind="custom" customClass="SWRevealViewControllerSegue" id="CDV-bi-4Uj"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="uFX-xb-z2s"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
@@ -548,7 +549,7 @@ Grand Rapids, MI 49503</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB8-3X-o8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-652"/>
+            <point key="canvasLocation" x="595" y="20"/>
         </scene>
         <!--Member Detail View Controller-->
         <scene sceneID="odR-oQ-SQ5">
@@ -663,16 +664,6 @@ Grand Rapids, MI 49503</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wb-d0-2fg" userLabel="Back Button">
-                                        <rect key="frame" x="20" y="23" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="XqK-dY-RnV"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="tfP-Dx-1Kd" secondAttribute="bottom" constant="15" id="BrW-yw-igg"/>
@@ -682,6 +673,7 @@ Grand Rapids, MI 49503</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lOn-6b-rSC"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="aboutMember" destination="tfP-Dx-1Kd" id="PwK-fw-zpR"/>
                         <outlet property="askMeAbout" destination="0KQ-tk-u02" id="ajK-aL-GgH"/>
@@ -740,24 +732,45 @@ Grand Rapids, MI 49503</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="oyn-EJ-LDY" kind="relationship" relationship="rootViewController" id="PHH-6B-tOP"/>
+                        <segue destination="JRH-wD-kZl" kind="relationship" relationship="rootViewController" id="vYU-DZ-S8q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUU-bQ-PPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="587" y="-659"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="5ih-gY-SiR">
+            <objects>
+                <viewController id="UzC-ZZ-C8S" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFC-Jg-Gqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfg-9X-cxT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vZp-hB-WoX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="mqh-eY-NBn" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="ppx-i4-eC5"/>
+                        <segue destination="oyn-EJ-LDY" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="onP-2M-PmU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZP4-UF-4dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="-652"/>
+        </scene>
     </scenes>
     <resources>
         <image name="about-active-dark" width="411" height="101"/>
         <image name="about-image" width="641" height="301"/>
-        <image name="back" width="67" height="67"/>
         <image name="callus" width="157" height="158"/>
         <image name="chat" width="121" height="110"/>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
-        <image name="hamburger-gold" width="30" height="30"/>
+        <image name="hamburger" width="30" height="30"/>
         <image name="join-active-dark" width="411" height="101"/>
         <image name="meet-active-dark" width="411" height="101"/>
         <image name="open space-blurred" width="641" height="1013"/>
@@ -772,6 +785,7 @@ Grand Rapids, MI 49503</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="2Qv-76-CA6"/>
         <segue reference="4qH-Pt-Xx3"/>
     </inferredMetricsTieBreakers>
 </document>

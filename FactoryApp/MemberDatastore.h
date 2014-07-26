@@ -10,6 +10,7 @@
 #import "Member.h"
 
 @interface MemberDatastore : NSObject <UIAlertViewDelegate>
++ (MemberDatastore*)sharedInstance;
 
 - (id)initWithTestData;
 - (NSUInteger)count;

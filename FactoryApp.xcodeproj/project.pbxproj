@@ -37,6 +37,7 @@
 		559B99B0194748FC00907493 /* MemberDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99AE194748FC00907493 /* MemberDatastore.m */; };
 		559B99B31947539E00907493 /* MemberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99B21947539E00907493 /* MemberTableViewController.m */; };
 		559B99B61947B3F300907493 /* MemberDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99B51947B3F300907493 /* MemberDetailViewController.m */; };
+		55B7FAB51982E3E300AB5D3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7FAB41982E3E300AB5D3C /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		559B99B21947539E00907493 /* MemberTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberTableViewController.m; sourceTree = "<group>"; };
 		559B99B41947B3F300907493 /* MemberDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDetailViewController.h; sourceTree = "<group>"; };
 		559B99B51947B3F300907493 /* MemberDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDetailViewController.m; sourceTree = "<group>"; };
+		55B7FAB31982E3E300AB5D3C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		55B7FAB41982E3E300AB5D3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 		553C043419354B100088A5E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55B7FAB31982E3E300AB5D3C /* SWRevealViewController.h */,
+				55B7FAB41982E3E300AB5D3C /* SWRevealViewController.m */,
 				553C043519354B100088A5E9 /* FactoryApp-Info.plist */,
 				553C043619354B100088A5E9 /* InfoPlist.strings */,
 				553C043919354B100088A5E9 /* main.m */,
@@ -394,6 +399,7 @@
 				550B51EA1958F64300B531CA /* AboutViewController.m in Sources */,
 				550B51E7195502FD00B531CA /* MenuViewController.m in Sources */,
 				559B99B0194748FC00907493 /* MemberDatastore.m in Sources */,
+				55B7FAB51982E3E300AB5D3C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

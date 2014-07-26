@@ -11,5 +11,6 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface AboutViewController  : UIViewController<MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end

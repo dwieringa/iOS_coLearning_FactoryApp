@@ -10,11 +10,9 @@
 #import "MemberDetailViewController.h"
 #import "Member.h"
 #import "MemberDatastore.h"
+#import "SWRevealViewController.h"
 
-@interface MemberTableViewController () {
-    MemberDatastore *datastore;
-}
-
+@interface MemberTableViewController ()
 @end
 
 @implementation MemberTableViewController
@@ -26,7 +24,6 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        datastore = [[MemberDatastore alloc] init];
     }
     return self;
 }
@@ -40,18 +37,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // Change button color
+    _menuButton.tintColor = [UIColor lightGrayColor];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _menuButton.target = self.revealViewController;
+    _menuButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    // change Back button to hamburger per design TODO: move this to superclass
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
-
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -71,7 +68,7 @@
         return [searchResults count];
         
     } else {
-        return [datastore count];
+        return [MemberDatastore.sharedInstance count];
     }
 }
 
@@ -84,7 +81,7 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         member = [searchResults objectAtIndex:indexPath.row];
     } else {
-        member = [datastore recordAtIndex:indexPath.row];
+        member = [MemberDatastore.sharedInstance recordAtIndex:indexPath.row];
     }
     cell.textLabel.text = member.name;
     [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:20]];
@@ -103,16 +100,21 @@
     // if the image hasn't been downloaded yet, do so in a background thread and update the table when complete
     if (cell.imageView.image == nil) {
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        __weak UIViewController *weakSelf = self;
         dispatch_async(queue, ^{
             member.thumbnail = member.pic; // the download happens here
             //TODO: actually create a smaller/scaled thumbnail.
             
             // update the TableViewCell in the main thread if the user hasn't scrolled off the screen
             dispatch_sync(dispatch_get_main_queue(), ^{
-                if ([tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
-                    [tableView beginUpdates];
-                    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-                    [tableView endUpdates];
+                if ([weakSelf isViewLoaded]) {
+                    // only update the table if the viewcontroller still exists and is being shown on the screen
+                    if ([tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
+                        // only update the cell if it is still holding the same person (cells get recycled as the user scrolls)
+                        [tableView beginUpdates];
+                        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                        [tableView endUpdates];
+                    }
                 }
             });
         });
@@ -129,7 +131,7 @@
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
-    searchResults = [datastore.members filteredArrayUsingPredicate:resultPredicate];
+    searchResults = [MemberDatastore.sharedInstance.members filteredArrayUsingPredicate:resultPredicate];
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -198,7 +200,7 @@
             person = [searchResults objectAtIndex:indexPath.row];
         } else {
             indexPath = [self.tableView indexPathForSelectedRow];
-            person = [datastore recordAtIndex:indexPath.row];
+            person = [MemberDatastore.sharedInstance recordAtIndex:indexPath.row];
         }
 
         vc.person = person;

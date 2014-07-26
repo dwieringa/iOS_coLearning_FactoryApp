@@ -18,6 +18,16 @@
 
 @implementation MemberDatastore
 
++ (MemberDatastore*)sharedInstance
+{
+    static MemberDatastore *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[MemberDatastore alloc] init];
+    });
+    return _sharedInstance;
+}
+
 - (id)init {
     self = [super init];
     if (self) {

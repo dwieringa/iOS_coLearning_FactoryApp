@@ -7,6 +7,7 @@
 //
 
 #import "SpaceViewController.h"
+#import "SWRevealViewController.h"
 
 @interface SpaceViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
@@ -96,6 +97,17 @@
     self.rightImageView.layer.borderWidth = 1.5;
     
     self.selectedImageIndex = 0;
+    
+    // Change button color
+    _menuButton.tintColor = [UIColor lightGrayColor];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _menuButton.target = self.revealViewController;
+    _menuButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "SWRevealViewController.h"
 #import "WebViewController.h"
 @import MapKit;
 
@@ -38,16 +39,17 @@
     twitterWebURL = [NSURL URLWithString:@"http://twitter.com/coFactory"];
     facebookAppURL = [NSURL URLWithString:@"fb://profile/159022818166"];
     facebookWebURL = [NSURL URLWithString:@"http://facebook.com/coFactory"];
-}
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+
+    // Change button color
+    _menuButton.tintColor = [UIColor lightGrayColor];
     
-    // change Back button to hamburger per design TODO: move this to superclass
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _menuButton.target = self.revealViewController;
+    _menuButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,12 +144,6 @@
         // Pass the needed URL to the new view controller.
         vc.url = facebookWebURL;
     }
-
-    // restore the Navigation Bar back button to it's default state
-    [self.navigationController.navigationBar setBackIndicatorImage:nil];
-    self.navigationController.navigationBar.tintColor = nil;
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:nil];
-
 }
 
 @end

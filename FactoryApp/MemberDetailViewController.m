@@ -67,34 +67,6 @@
     twitterWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter]];
     facebookAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"fb://profile/%@",self.person.fb]];
     facebookWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://facebook.com/%@",self.person.fb]];
-
-    // restore the Navigation Bar back button to it's default state
-    [self.navigationController.navigationBar setBackIndicatorImage:nil];
-    self.navigationController.navigationBar.tintColor = nil;
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:nil];
-
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];   //it hides
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-    // handle nav bar hiding for the case when coming from Search results.  The search bar from the previous page seems to unhide the navigation bar after viewWillAppear is called on this viewcontroller
-    [self.navigationController setNavigationBarHidden:YES];   //it hides
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];    // it shows
-}
-
-- (IBAction)backButtonPressed:(UIButton *)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)twitterButtonPressed:(id)sender {

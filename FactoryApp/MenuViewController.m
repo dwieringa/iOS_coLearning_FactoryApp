@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "FactoryAppDelegate.h"
+#import "SWRevealViewController.h"
 
 @interface MenuViewController ()
 
@@ -15,48 +16,18 @@
 
 @implementation MenuViewController
 
+- (void)setup
+{
+}
+- (void)awakeFromNib
+{
+    [self setup];
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    [self setup];
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    FactoryAppDelegate *appDelegate = (FactoryAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    // hide navigation bar on menu page per design
-    [self.navigationController setNavigationBarHidden:YES];   //it hides
-
-    // if app just launch, automagically push to the Meet page per design/prototype
-    if (appDelegate.justLaunched) {
-        [self performSegueWithIdentifier: @"MeetSegue" sender: self];
-        appDelegate.justLaunched = NO;
-    }
-    
-    // change Back button to hamburger per design TODO: move this to superclass
-    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"hamburger"]];
-    self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
-    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"hamburger"]];
-
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-
-    // unhide navigation bar for other pages per design
-    [self.navigationController setNavigationBarHidden:NO];    // it shows
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,12 +44,17 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    // remove Back button text
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
-                                             initWithTitle:@""
-                                             style:UIBarButtonItemStylePlain
-                                             target:nil
-                                             action:nil];
+    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
+        SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;
+        
+        swSegue.performBlock = ^(SWRevealViewControllerSegue* rvc_segue, UIViewController* svc, UIViewController* dvc) {
+            
+            UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
+            [navController setViewControllers: @[dvc] animated: NO ];
+            [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+        };
+        
+    }
 }
 
 @end

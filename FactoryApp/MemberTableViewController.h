@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MemberTableViewController : UITableViewController
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @end
