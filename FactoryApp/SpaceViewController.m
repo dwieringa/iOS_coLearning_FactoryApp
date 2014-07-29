@@ -204,7 +204,9 @@ static NSInteger const RequiredLengthOfSwipeGesture = 100;
                                  self.rightImageView.frame = CGRectMake(rightImageViewX, imageViewY, imageViewWidth, imageViewHeight);
                              }
                              completion:^(BOOL finished) {}];
-            
+        }
+
+        if (swipeCompleted) {
             // fade old description label out
             [UIView animateWithDuration:.25
                                   delay:0
