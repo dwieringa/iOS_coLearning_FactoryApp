@@ -122,7 +122,7 @@ static NSInteger const RequiredLengthOfSwipeGesture = 100;
     _menuButton.action = @selector(revealToggle:);
     
     // Set the gesture
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 }
 
@@ -224,9 +224,9 @@ static NSInteger const RequiredLengthOfSwipeGesture = 100;
     }
 }
 
-/*
 #pragma mark - Navigation
 
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

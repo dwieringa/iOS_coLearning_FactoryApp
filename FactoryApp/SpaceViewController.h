@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpaceViewController : UIViewController<UIScrollViewDelegate>
+@interface SpaceViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end
