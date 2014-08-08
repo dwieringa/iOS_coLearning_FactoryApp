@@ -156,7 +156,7 @@ static NSInteger const RequiredLengthOfSwipeGesture = 100;
         self.rightImageView.frame = CGRectMake(rightImageViewX+xTranslation, imageViewY, imageViewWidth, imageViewHeight);
         
         // determine if swipe action should be completed
-        if (abs(xTranslation) > RequiredLengthOfSwipeGesture) {
+        if (ABS(xTranslation) > RequiredLengthOfSwipeGesture) {
 
             // stop the gesture since it is now compmlete
             recognizer.enabled = NO;
