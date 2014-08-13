@@ -12,6 +12,8 @@
 #import "MemberDatastore.h"
 #import "SWRevealViewController.h"
 
+static NSInteger const RowHeight = 60;
+
 @interface MemberTableViewController ()
 @end
 
@@ -94,11 +96,11 @@
     }
 
     cell.imageView.image = member.thumbnail;
-    cell.imageView.layer.cornerRadius = 21; //cell.imageView.frame.size.width / 2.0;
+    cell.imageView.layer.cornerRadius = cell.imageView.image.size.width / 2.0;
     cell.imageView.clipsToBounds = YES;
     
     // if the image hasn't been downloaded yet, do so in a background thread and update the table when complete
-    if (cell.imageView.image == nil) {
+    if (member.thumbnail == nil) {
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         __weak UIViewController *weakSelf = self;
         dispatch_async(queue, ^{
@@ -125,7 +127,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return RowHeight;
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope

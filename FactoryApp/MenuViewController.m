@@ -11,6 +11,9 @@
 #import "SWRevealViewController.h"
 
 @interface MenuViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *meetButton;
+@property (weak, nonatomic) IBOutlet UIButton *spaceButton;
+@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
 
 @end
 
@@ -28,6 +31,13 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     [self setup];
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [[self.meetButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[self.spaceButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[self.aboutButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 - (void)didReceiveMemoryWarning

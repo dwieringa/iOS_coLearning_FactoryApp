@@ -10,16 +10,16 @@
 
 @interface Member : NSObject
 
-@property NSString *objectId;
-@property NSString *ama;
-@property NSString *bio;
-@property NSString *email;
-@property NSString *fb;
-@property NSString *name;
-@property NSString *twitter;
-@property NSURL *picURL;
-@property (readonly) UIImage *pic;
-@property UIImage *thumbnail;
+@property (nonatomic, strong) NSString *objectId;
+@property (nonatomic, strong) NSString *ama;
+@property (nonatomic, strong) NSString *bio;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSString *fb;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *twitter;
+@property (nonatomic, strong) NSURL *picURL;
+@property (nonatomic, strong, readonly) UIImage *pic;
+@property (nonatomic, strong) UIImage *thumbnail;
 
 - (id)initWithDictionary:(NSDictionary *)properties;
 

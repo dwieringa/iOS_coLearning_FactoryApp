@@ -8,6 +8,8 @@
 
 #import "Member.h"
 
+static NSInteger const ThumbnailSize = 50;
+
 @implementation Member
 
 - (id)initWithDictionary:(NSDictionary *)properties {
@@ -37,6 +39,22 @@
         _pic = [UIImage imageWithData:imageData];
     }
     return _pic;
+}
+
+- (void)setThumbnail:(UIImage *)thumbnail
+{
+    if( thumbnail.size.width != ThumbnailSize || thumbnail.size.height != ThumbnailSize)
+    {
+        CGSize thumbnailSize = CGSizeMake(ThumbnailSize, ThumbnailSize);
+        UIGraphicsBeginImageContextWithOptions(thumbnailSize, NO, UIScreen.mainScreen.scale);
+        [thumbnail drawInRect:CGRectMake(0, 0, thumbnailSize.width, thumbnailSize.height)];
+        _thumbnail = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    else
+    {
+        _thumbnail = thumbnail;
+    }
 }
 
 @end
