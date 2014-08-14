@@ -571,12 +571,12 @@ Grand Rapids, MI 49503</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-jb-CzT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-jb-CzT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Janson Hartliep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-r7-Sr4" userLabel="Name Label - Janson Hartliep">
-                                        <rect key="frame" x="20" y="216" width="280" height="44"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Janson Hartliep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-r7-Sr4" userLabel="Name Label - Janson Hartliep">
+                                        <rect key="frame" x="20" y="216" width="280" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -591,32 +591,32 @@ Grand Rapids, MI 49503</string>
                                             <constraint firstAttribute="width" constant="320" id="uHy-7E-QJb"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj" userLabel="Talk To Me View">
-                                        <rect key="frame" x="20" y="335" width="280" height="204"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj" userLabel="Talk To Me View">
+                                        <rect key="frame" x="20" y="323" width="280" height="182"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zir-XG-pjz">
-                                                <rect key="frame" x="115" y="0.0" width="50" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zir-XG-pjz">
+                                                <rect key="frame" x="110" y="0.0" width="60" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="chat">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TALK TO ME ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-pT-Ljk">
-                                                <rect key="frame" x="60" y="58" width="161" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TALK TO ME ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-pT-Ljk">
+                                                <rect key="frame" x="79" y="63" width="122" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The web, startup culture, cats, why Seattle is awesome" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-tk-u02">
-                                                <rect key="frame" x="17" y="87" width="246" height="68"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The web, startup culture, cats, why Seattle is awesome" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-tk-u02">
+                                                <rect key="frame" x="20" y="90" width="240" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-b4-wTw">
-                                                <rect key="frame" x="32" y="163" width="217" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-b4-wTw">
+                                                <rect key="frame" x="32" y="132" width="217" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -643,11 +643,12 @@ Grand Rapids, MI 49503</string>
                                             <constraint firstAttribute="trailing" secondItem="0KQ-tk-u02" secondAttribute="trailing" constant="20" id="ZtG-s5-sPw"/>
                                             <constraint firstItem="0KQ-tk-u02" firstAttribute="leading" secondItem="XNx-vg-fmj" secondAttribute="leading" constant="20" id="e1m-B4-IVz"/>
                                             <constraint firstItem="Ubx-pT-Ljk" firstAttribute="top" secondItem="Zir-XG-pjz" secondAttribute="bottom" constant="8" symbolic="YES" id="faq-aO-YL0"/>
+                                            <constraint firstItem="Zir-XG-pjz" firstAttribute="top" secondItem="XNx-vg-fmj" secondAttribute="top" id="ubo-jT-yOr"/>
                                             <constraint firstItem="Zir-XG-pjz" firstAttribute="centerX" secondItem="Ubx-pT-Ljk" secondAttribute="centerX" id="xBP-V3-LsO"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-Dx-1Kd">
-                                        <rect key="frame" x="20" y="547" width="280" height="80"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-Dx-1Kd">
+                                        <rect key="frame" x="20" y="513" width="280" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="About Janson: blah blah blah">
@@ -661,12 +662,12 @@ Grand Rapids, MI 49503</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-LP-9Vt" userLabel="Social Link View">
-                                        <rect key="frame" x="55" y="268" width="210" height="59"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-LP-9Vt" userLabel="Social Link View">
+                                        <rect key="frame" x="55" y="253" width="210" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ic-dT0" userLabel="Email Button">
-                                                <rect key="frame" x="138" y="5" width="50" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ic-dT0" userLabel="Email Button">
+                                                <rect key="frame" x="138" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="email">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -675,8 +676,8 @@ Grand Rapids, MI 49503</string>
                                                     <action selector="emailButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="K0b-B2-hbB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-jC-CGJ" userLabel="Facebook Button">
-                                                <rect key="frame" x="80" y="5" width="50" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-jC-CGJ" userLabel="Facebook Button">
+                                                <rect key="frame" x="80" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="jwj-KK-wd4"/>
@@ -689,8 +690,8 @@ Grand Rapids, MI 49503</string>
                                                     <action selector="facebookButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="bvC-p4-WBU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
-                                                <rect key="frame" x="22" y="5" width="50" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
+                                                <rect key="frame" x="22" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="twitter">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -710,6 +711,7 @@ Grand Rapids, MI 49503</string>
                                             <constraint firstItem="sti-Ic-dT0" firstAttribute="leading" secondItem="TZc-jC-CGJ" secondAttribute="trailing" constant="8" symbolic="YES" id="IRC-g2-yZJ"/>
                                             <constraint firstItem="Nz9-ld-WBr" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="top" id="LQQ-OJ-l8e"/>
                                             <constraint firstAttribute="bottom" secondItem="Nz9-ld-WBr" secondAttribute="bottom" id="RxD-vE-MJ8"/>
+                                            <constraint firstAttribute="width" priority="1" constant="210" placeholder="YES" id="VXd-P6-0bv"/>
                                             <constraint firstItem="TZc-jC-CGJ" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="top" id="W9o-dq-7HE"/>
                                             <constraint firstAttribute="bottom" secondItem="TZc-jC-CGJ" secondAttribute="bottom" id="aAW-eU-MUt"/>
                                             <constraint firstItem="sti-Ic-dT0" firstAttribute="height" secondItem="Nz9-ld-WBr" secondAttribute="height" id="bDn-Dp-eQd"/>
@@ -717,13 +719,13 @@ Grand Rapids, MI 49503</string>
                                             <constraint firstAttribute="centerX" secondItem="TZc-jC-CGJ" secondAttribute="centerX" id="wbe-Ha-fvi"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okt-Do-KrV" userLabel="Right Spacer View">
-                                        <rect key="frame" x="265" y="268" width="55" height="59"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okt-Do-KrV" userLabel="Right Spacer View">
+                                        <rect key="frame" x="265" y="253" width="55" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-79-JzM" userLabel="Left Spacer View">
-                                        <rect key="frame" x="0.0" y="268" width="55" height="59"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-79-JzM" userLabel="Left Spacer View">
+                                        <rect key="frame" x="0.0" y="253" width="55" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
