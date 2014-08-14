@@ -114,7 +114,7 @@ static NSInteger const RowHeight = 60;
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if ([weakSelf isViewLoaded]) {
                     // only update the table if the viewcontroller still exists and is being shown on the screen
-                    if ([tableView cellForRowAtIndexPath:indexPath].textLabel.text == member.name) {
+                    if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text isEqualToString:[NSString stringWithFormat:@"%@ %@",member.firstName, member.lastName]]) {
                         // only update the cell if it is still holding the same person (cells get recycled as the user scrolls)
                         [tableView beginUpdates];
                         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];

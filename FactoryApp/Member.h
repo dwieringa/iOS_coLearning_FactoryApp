@@ -15,7 +15,9 @@
 @property (nonatomic, strong) NSString *bio;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *fb;
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong) NSString *twitter;
 @property (nonatomic, strong) NSURL *picURL;
 @property (nonatomic, strong, readonly) UIImage *pic;

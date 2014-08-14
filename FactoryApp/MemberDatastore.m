@@ -48,8 +48,9 @@
                 [memberArray addObject:[[Member alloc] initWithDictionary:memberDictionary]];
             }
             
-            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-            _members=[memberArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+            NSSortDescriptor *sort1 = [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES];
+            NSSortDescriptor *sort2 = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+            _members=[memberArray sortedArrayUsingDescriptors:[NSArray arrayWithObjects:sort1, sort2, nil]];
         }
     }
     

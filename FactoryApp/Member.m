@@ -20,7 +20,8 @@ static NSInteger const ThumbnailSize = 50;
         _bio = properties[@"BIO"];
         _email = properties[@"EMAIL"];
         _fb = properties[@"FB"];
-        _name = properties[@"NAME"];
+        _firstName = properties[@"firstname"];
+        _lastName = properties[@"lastname"];
         _twitter = properties[@"TWITTER"];
         _picURL = [NSURL URLWithString:properties[@"pic"][@"url"]];
         _thumbnailURL = [NSURL URLWithString:properties[@"thumbnail"][@"url"]];
@@ -40,6 +41,11 @@ static NSInteger const ThumbnailSize = 50;
         _pic = [UIImage imageWithData:imageData];
     }
     return _pic;
+}
+
+- (NSString *)name
+{
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
 @synthesize thumbnailFromSource = _thumbnailFromSource;

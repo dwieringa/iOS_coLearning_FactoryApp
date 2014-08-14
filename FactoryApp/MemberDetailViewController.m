@@ -45,8 +45,9 @@
     if (![self.person.bio  isEqual: @""] && [self.aboutMember respondsToSelector:@selector(setAttributedText:)])
     {    // fill about text in attributed fashion
         
-        NSArray *nameParts = [self.person.name componentsSeparatedByString:@" "];
-        NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", [nameParts objectAtIndex:0]];
+//        NSArray *nameParts = [self.person.name componentsSeparatedByString:@" "];
+        //        NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", [nameParts objectAtIndex:0]];
+        NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", self.person.firstName];
         NSRange rangeOfBold = NSMakeRange(0, aboutText.length);
         [aboutText appendString:self.person.bio];
 
