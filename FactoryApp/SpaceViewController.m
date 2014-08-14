@@ -9,7 +9,7 @@
 #import "SpaceViewController.h"
 #import "SWRevealViewController.h"
 
-static NSInteger const RequiredLengthOfSwipeGesture = 100;
+static NSInteger const RequiredLengthOfSwipeGesture = 50;
 
 @interface SpaceViewController () {
     NSInteger imageViewWidth;
