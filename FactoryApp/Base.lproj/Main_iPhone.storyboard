@@ -571,80 +571,58 @@ Grand Rapids, MI 49503</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-jb-CzT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-jb-CzT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Janson Hartliep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-r7-Sr4">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Janson Hartliep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-r7-Sr4" userLabel="Name Label - Janson Hartliep">
                                         <rect key="frame" x="20" y="216" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98E-Z7-gx4">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="98E-Z7-gx4" userLabel="Portrait Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="208" id="MEP-cM-YYO"/>
+                                            <constraint firstAttribute="width" constant="320" id="uHy-7E-QJb"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ic-dT0" userLabel="Email Button">
-                                        <rect key="frame" x="205" y="268" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="email">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="emailButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="K0b-B2-hbB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
-                                        <rect key="frame" x="66" y="267" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="twitter">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="twitterButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="AxK-5v-msj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-jC-CGJ" userLabel="Facebook Button">
-                                        <rect key="frame" x="136" y="268" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="facebook">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="facebookButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="bvC-p4-WBU"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj" userLabel="Talk To Me View">
                                         <rect key="frame" x="20" y="335" width="280" height="204"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zir-XG-pjz">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zir-XG-pjz">
                                                 <rect key="frame" x="115" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="chat">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TALK TO ME ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-pT-Ljk">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TALK TO ME ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-pT-Ljk">
                                                 <rect key="frame" x="60" y="58" width="161" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The web, startup culture, cats, why Seattle is awesome" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-tk-u02">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The web, startup culture, cats, why Seattle is awesome" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-tk-u02">
                                                 <rect key="frame" x="17" y="87" width="246" height="68"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-b4-wTw">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-b4-wTw">
                                                 <rect key="frame" x="32" y="163" width="217" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Adu-JD-s0R"/>
+                                                    <constraint firstAttribute="width" constant="217" id="BDt-iu-Cz6"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="SAY HELLO!">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -656,6 +634,17 @@ Grand Rapids, MI 49503</string>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Zir-XG-pjz" firstAttribute="centerX" secondItem="Ovv-b4-wTw" secondAttribute="centerX" id="3Ua-em-Zu2"/>
+                                            <constraint firstItem="Zir-XG-pjz" firstAttribute="centerX" secondItem="0KQ-tk-u02" secondAttribute="centerX" id="GHv-KA-I1C"/>
+                                            <constraint firstItem="Ovv-b4-wTw" firstAttribute="top" secondItem="0KQ-tk-u02" secondAttribute="bottom" constant="8" symbolic="YES" id="LBK-AL-JkX"/>
+                                            <constraint firstItem="0KQ-tk-u02" firstAttribute="top" secondItem="Ubx-pT-Ljk" secondAttribute="bottom" constant="8" symbolic="YES" id="Rch-6X-nox"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ovv-b4-wTw" secondAttribute="bottom" constant="20" symbolic="YES" id="UaJ-Ux-a8X"/>
+                                            <constraint firstAttribute="trailing" secondItem="0KQ-tk-u02" secondAttribute="trailing" constant="20" id="ZtG-s5-sPw"/>
+                                            <constraint firstItem="0KQ-tk-u02" firstAttribute="leading" secondItem="XNx-vg-fmj" secondAttribute="leading" constant="20" id="e1m-B4-IVz"/>
+                                            <constraint firstItem="Ubx-pT-Ljk" firstAttribute="top" secondItem="Zir-XG-pjz" secondAttribute="bottom" constant="8" symbolic="YES" id="faq-aO-YL0"/>
+                                            <constraint firstItem="Zir-XG-pjz" firstAttribute="centerX" secondItem="Ubx-pT-Ljk" secondAttribute="centerX" id="xBP-V3-LsO"/>
+                                        </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-Dx-1Kd">
                                         <rect key="frame" x="20" y="547" width="280" height="80"/>
@@ -672,16 +661,112 @@ Grand Rapids, MI 49503</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-LP-9Vt" userLabel="Social Link View">
+                                        <rect key="frame" x="55" y="268" width="210" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sti-Ic-dT0" userLabel="Email Button">
+                                                <rect key="frame" x="138" y="5" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="email">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="emailButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="K0b-B2-hbB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZc-jC-CGJ" userLabel="Facebook Button">
+                                                <rect key="frame" x="80" y="5" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="jwj-KK-wd4"/>
+                                                    <constraint firstAttribute="height" constant="50" id="nsQ-Ya-oaP"/>
+                                                </constraints>
+                                                <state key="normal" image="facebook">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="facebookButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="bvC-p4-WBU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz9-ld-WBr" userLabel="Twitter Button">
+                                                <rect key="frame" x="22" y="5" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="twitter">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twitterButtonPressed:" destination="diU-4O-pEZ" eventType="touchUpInside" id="AxK-5v-msj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="top" id="9Ab-al-UQH"/>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="height" secondItem="TZc-jC-CGJ" secondAttribute="height" id="Dl5-aG-8ve"/>
+                                            <constraint firstAttribute="bottom" secondItem="sti-Ic-dT0" secondAttribute="bottom" id="F1T-XN-9aY"/>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="width" secondItem="Nz9-ld-WBr" secondAttribute="width" id="FsH-Vj-31i"/>
+                                            <constraint firstItem="TZc-jC-CGJ" firstAttribute="leading" secondItem="Nz9-ld-WBr" secondAttribute="trailing" constant="8" symbolic="YES" id="H86-H7-Df8"/>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="leading" secondItem="TZc-jC-CGJ" secondAttribute="trailing" constant="8" symbolic="YES" id="IRC-g2-yZJ"/>
+                                            <constraint firstItem="Nz9-ld-WBr" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="top" id="LQQ-OJ-l8e"/>
+                                            <constraint firstAttribute="bottom" secondItem="Nz9-ld-WBr" secondAttribute="bottom" id="RxD-vE-MJ8"/>
+                                            <constraint firstItem="TZc-jC-CGJ" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="top" id="W9o-dq-7HE"/>
+                                            <constraint firstAttribute="bottom" secondItem="TZc-jC-CGJ" secondAttribute="bottom" id="aAW-eU-MUt"/>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="height" secondItem="Nz9-ld-WBr" secondAttribute="height" id="bDn-Dp-eQd"/>
+                                            <constraint firstItem="sti-Ic-dT0" firstAttribute="width" secondItem="TZc-jC-CGJ" secondAttribute="width" id="kPB-TP-rgK"/>
+                                            <constraint firstAttribute="centerX" secondItem="TZc-jC-CGJ" secondAttribute="centerX" id="wbe-Ha-fvi"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okt-Do-KrV" userLabel="Right Spacer View">
+                                        <rect key="frame" x="265" y="268" width="55" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dj-79-JzM" userLabel="Left Spacer View">
+                                        <rect key="frame" x="0.0" y="268" width="55" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="tfP-Dx-1Kd" secondAttribute="bottom" constant="15" id="BrW-yw-igg"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="leading" secondItem="4Dj-79-JzM" secondAttribute="trailing" id="4rq-4P-HvG"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="top" secondItem="Bu9-r7-Sr4" secondAttribute="bottom" constant="8" symbolic="YES" id="51P-xx-tnP"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="height" secondItem="4Dj-79-JzM" secondAttribute="height" id="90U-sg-VAW"/>
+                                    <constraint firstItem="tfP-Dx-1Kd" firstAttribute="leading" secondItem="bE5-jb-CzT" secondAttribute="leading" constant="20" id="9nL-e9-5vR"/>
+                                    <constraint firstItem="tfP-Dx-1Kd" firstAttribute="top" secondItem="XNx-vg-fmj" secondAttribute="bottom" constant="8" symbolic="YES" id="Aca-eu-2cd"/>
+                                    <constraint firstAttribute="bottom" secondItem="tfP-Dx-1Kd" secondAttribute="bottom" constant="20" symbolic="YES" id="BrW-yw-igg"/>
+                                    <constraint firstAttribute="trailing" secondItem="98E-Z7-gx4" secondAttribute="trailing" id="Exq-e8-YYQ"/>
+                                    <constraint firstItem="98E-Z7-gx4" firstAttribute="top" secondItem="bE5-jb-CzT" secondAttribute="top" id="EzN-Ev-VeP"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="centerY" secondItem="4Dj-79-JzM" secondAttribute="centerY" id="FSb-1r-XOj"/>
+                                    <constraint firstAttribute="trailing" secondItem="tfP-Dx-1Kd" secondAttribute="trailing" constant="20" id="Fk3-2C-6Re"/>
+                                    <constraint firstAttribute="trailing" secondItem="okt-Do-KrV" secondAttribute="trailing" id="Kog-bQ-UMR"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNx-vg-fmj" secondAttribute="trailing" constant="20" id="LEH-9w-jLb"/>
+                                    <constraint firstItem="XNx-vg-fmj" firstAttribute="leading" secondItem="bE5-jb-CzT" secondAttribute="leading" constant="20" id="OSh-C8-aOM"/>
+                                    <constraint firstItem="4Dj-79-JzM" firstAttribute="leading" secondItem="bE5-jb-CzT" secondAttribute="leading" id="Qa7-Fd-07W"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="height" secondItem="okt-Do-KrV" secondAttribute="height" id="UJR-UW-CPt"/>
+                                    <constraint firstItem="aiM-LP-9Vt" firstAttribute="centerY" secondItem="okt-Do-KrV" secondAttribute="centerY" id="VDP-qG-OdU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bu9-r7-Sr4" secondAttribute="trailing" constant="20" symbolic="YES" id="XRq-sq-bQ8"/>
+                                    <constraint firstItem="XNx-vg-fmj" firstAttribute="top" secondItem="aiM-LP-9Vt" secondAttribute="bottom" constant="20" id="b3U-ZR-XmT"/>
+                                    <constraint firstItem="4Dj-79-JzM" firstAttribute="width" secondItem="okt-Do-KrV" secondAttribute="width" id="d2A-h4-t9Z"/>
+                                    <constraint firstItem="okt-Do-KrV" firstAttribute="leading" secondItem="aiM-LP-9Vt" secondAttribute="trailing" id="dzv-rP-pbL"/>
+                                    <constraint firstItem="98E-Z7-gx4" firstAttribute="leading" secondItem="bE5-jb-CzT" secondAttribute="leading" id="loH-KD-ox0"/>
+                                    <constraint firstItem="Bu9-r7-Sr4" firstAttribute="leading" secondItem="bE5-jb-CzT" secondAttribute="leading" constant="20" symbolic="YES" id="mCk-Cc-CpE"/>
+                                    <constraint firstItem="Bu9-r7-Sr4" firstAttribute="top" secondItem="98E-Z7-gx4" secondAttribute="bottom" constant="8" symbolic="YES" id="wk0-D1-aaK"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g9z-e7-7hd" firstAttribute="top" secondItem="bE5-jb-CzT" secondAttribute="bottom" id="0ph-si-VQy"/>
+                            <constraint firstItem="bE5-jb-CzT" firstAttribute="top" secondItem="5ba-VC-ifM" secondAttribute="top" id="GeJ-97-i6w"/>
+                            <constraint firstItem="bE5-jb-CzT" firstAttribute="leading" secondItem="5ba-VC-ifM" secondAttribute="leading" id="t9j-we-apz"/>
+                            <constraint firstAttribute="trailing" secondItem="bE5-jb-CzT" secondAttribute="trailing" id="yBs-SP-HjX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lOn-6b-rSC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="aboutMember" destination="tfP-Dx-1Kd" id="PwK-fw-zpR"/>
                         <outlet property="askMeAbout" destination="0KQ-tk-u02" id="ajK-aL-GgH"/>
@@ -773,8 +858,8 @@ Grand Rapids, MI 49503</string>
     <resources>
         <image name="about-image" width="641" height="301"/>
         <image name="aboutIcon" width="61" height="61"/>
-        <image name="callus" width="157" height="158"/>
-        <image name="chat" width="121" height="110"/>
+        <image name="callus" width="78" height="79"/>
+        <image name="chat" width="60" height="55"/>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
@@ -783,8 +868,8 @@ Grand Rapids, MI 49503</string>
         <image name="open space-blurred" width="641" height="1013"/>
         <image name="spaceIcon" width="61" height="61"/>
         <image name="twitter" width="88" height="88"/>
-        <image name="visitus" width="157" height="158"/>
-        <image name="whiterectangle" width="454" height="158"/>
+        <image name="visitus" width="78" height="79"/>
+        <image name="whiterectangle" width="227" height="79"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -793,6 +878,6 @@ Grand Rapids, MI 49503</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="2Qv-76-CA6"/>
-        <segue reference="4qH-Pt-Xx3"/>
+        <segue reference="ph4-Ax-rjm"/>
     </inferredMetricsTieBreakers>
 </document>
