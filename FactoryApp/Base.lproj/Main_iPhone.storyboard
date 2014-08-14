@@ -210,11 +210,11 @@
                         <viewControllerLayoutGuide type="bottom" id="x0t-EW-wHH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yRu-3E-p81">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-r3-DbT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="905"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-FJ-ewi">
@@ -373,7 +373,7 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callus" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-Aa-gCl">
-                                        <rect key="frame" x="20" y="642" width="80" height="80"/>
+                                        <rect key="frame" x="20" y="654" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Ler-XT-ggP"/>
@@ -381,15 +381,15 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitus" translatesAutoresizingMaskIntoConstraints="NO" id="KrN-jY-Jv4">
-                                        <rect key="frame" x="20" y="730" width="80" height="80"/>
+                                        <rect key="frame" x="20" y="742" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiterectangle" translatesAutoresizingMaskIntoConstraints="NO" id="I6O-aW-190" userLabel="Address border - Image View - whiterectangle">
-                                        <rect key="frame" x="100" y="730" width="200" height="80"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6O-aW-190" userLabel="Address border - Image View - whiterectangle">
+                                        <rect key="frame" x="100" y="742" width="200" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="GTv-QW-11b" userLabel="Address Label">
-                                        <rect key="frame" x="108" y="730" width="192" height="80"/>
+                                        <rect key="frame" x="108" y="742" width="192" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">38 W. Fulton
 Ste 400
@@ -398,19 +398,19 @@ Grand Rapids, MI 49503</string>
                                         <color key="textColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiterectangle" translatesAutoresizingMaskIntoConstraints="NO" id="XQN-3w-mMC" userLabel="Phone border - Image View - whiterectangle">
-                                        <rect key="frame" x="100" y="642" width="200" height="80"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XQN-3w-mMC" userLabel="Phone border - Image View - whiterectangle">
+                                        <rect key="frame" x="100" y="654" width="200" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="616.379.9377" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pey-6Q-R7R" userLabel="Phone Label - 616.379.9377">
-                                        <rect key="frame" x="108" y="642" width="192" height="80"/>
+                                        <rect key="frame" x="108" y="654" width="192" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                         <color key="textColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH3-Yi-HoI" userLabel="Button - Address">
-                                        <rect key="frame" x="20" y="730" width="280" height="80"/>
+                                        <rect key="frame" x="20" y="742" width="280" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                         <state key="normal">
@@ -422,7 +422,7 @@ Grand Rapids, MI 49503</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvY-KZ-2cB" userLabel="Button - Phone">
-                                        <rect key="frame" x="20" y="642" width="280" height="80"/>
+                                        <rect key="frame" x="20" y="654" width="280" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                         <state key="normal">
@@ -468,7 +468,7 @@ Grand Rapids, MI 49503</string>
                                     <constraint firstItem="KrN-jY-Jv4" firstAttribute="top" secondItem="bwg-Aa-gCl" secondAttribute="bottom" constant="8" symbolic="YES" id="W2f-en-Oak"/>
                                     <constraint firstItem="GTv-QW-11b" firstAttribute="top" secondItem="I6O-aW-190" secondAttribute="top" id="ZSR-eh-Dh6"/>
                                     <constraint firstItem="buT-je-Drh" firstAttribute="centerX" secondItem="X2u-r3-DbT" secondAttribute="centerX" id="Za1-cp-kel"/>
-                                    <constraint firstItem="bwg-Aa-gCl" firstAttribute="top" secondItem="bM6-2o-Xu1" secondAttribute="bottom" constant="8" symbolic="YES" id="Zg9-yT-eXf"/>
+                                    <constraint firstItem="bwg-Aa-gCl" firstAttribute="top" secondItem="bM6-2o-Xu1" secondAttribute="bottom" constant="20" id="Zg9-yT-eXf"/>
                                     <constraint firstItem="GTv-QW-11b" firstAttribute="height" secondItem="I6O-aW-190" secondAttribute="height" id="a1a-or-6p8"/>
                                     <constraint firstItem="pey-6Q-R7R" firstAttribute="leading" secondItem="bwg-Aa-gCl" secondAttribute="trailing" constant="8" symbolic="YES" id="b8f-W9-mXe"/>
                                     <constraint firstItem="bM6-2o-Xu1" firstAttribute="top" secondItem="7oT-FJ-ewi" secondAttribute="bottom" constant="36" id="cgY-No-Sze"/>
@@ -510,9 +510,14 @@ Grand Rapids, MI 49503</string>
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="EPy-w2-0W5"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <size key="freeformSize" width="320" height="568"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="addressBorderView" destination="I6O-aW-190" id="Rbb-4v-2nP"/>
+                        <outlet property="callUsImageView" destination="bwg-Aa-gCl" id="433-jS-Nzk"/>
                         <outlet property="menuButton" destination="EPy-w2-0W5" id="CFd-2P-Jbo"/>
+                        <outlet property="phoneBorderView" destination="XQN-3w-mMC" id="hdx-su-saW"/>
+                        <outlet property="visitUsImageView" destination="KrN-jY-Jv4" id="ew4-pg-chi"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="4qH-Pt-Xx3"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="37d-fH-ZdA"/>
                     </connections>
@@ -524,7 +529,7 @@ Grand Rapids, MI 49503</string>
         <!--Menu View Controller - Menu-->
         <scene sceneID="gBX-Ky-vdt">
             <objects>
-                <viewController id="oyn-EJ-LDY" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="oyn-EJ-LDY" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VUL-rh-xVp"/>
                         <viewControllerLayoutGuide type="bottom" id="sL5-jD-voq"/>
@@ -600,11 +605,11 @@ Grand Rapids, MI 49503</string>
                         <viewControllerLayoutGuide type="bottom" id="g9z-e7-7hd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5ba-VC-ifM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE5-jb-CzT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Janson Hartliep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-r7-Sr4" userLabel="Name Label - Janson Hartliep">
@@ -802,7 +807,7 @@ Grand Rapids, MI 49503</string>
                     <navigationItem key="navigationItem" id="lOn-6b-rSC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="568"/>
+                    <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="aboutMember" destination="tfP-Dx-1Kd" id="PwK-fw-zpR"/>
                         <outlet property="askMeAbout" destination="0KQ-tk-u02" id="ajK-aL-GgH"/>
@@ -825,11 +830,11 @@ Grand Rapids, MI 49503</string>
                         <viewControllerLayoutGuide type="bottom" id="Kah-nu-Y5X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Bv-R0-UFS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COC-Wm-WmX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -894,7 +899,7 @@ Grand Rapids, MI 49503</string>
     <resources>
         <image name="about-image" width="641" height="301"/>
         <image name="aboutIcon" width="61" height="61"/>
-        <image name="callus" width="78" height="79"/>
+        <image name="callus" width="72" height="72"/>
         <image name="chat" width="60" height="55"/>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
@@ -904,8 +909,7 @@ Grand Rapids, MI 49503</string>
         <image name="open space-blurred" width="641" height="1013"/>
         <image name="spaceIcon" width="61" height="61"/>
         <image name="twitter" width="88" height="88"/>
-        <image name="visitus" width="78" height="79"/>
-        <image name="whiterectangle" width="227" height="79"/>
+        <image name="visitus" width="72" height="72"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

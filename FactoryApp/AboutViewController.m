@@ -17,6 +17,10 @@
     NSURL *facebookAppURL;
     NSURL *facebookWebURL;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *addressBorderView;
+@property (weak, nonatomic) IBOutlet UIImageView *phoneBorderView;
+@property (weak, nonatomic) IBOutlet UIImageView *callUsImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *visitUsImageView;
 
 @end
 
@@ -40,6 +44,17 @@
     facebookAppURL = [NSURL URLWithString:@"fb://profile/159022818166"];
     facebookWebURL = [NSURL URLWithString:@"http://facebook.com/coFactory"];
 
+    UIColor *borderColor = [[UIColor alloc] initWithRed:189.0 / 255 green:189.0 / 255 blue:191.0 / 255 alpha:1.0];
+
+    // draw borders around phone and address "buttons"
+    [self.phoneBorderView.layer setBorderColor: [borderColor CGColor]];
+    [self.phoneBorderView.layer setBorderWidth: 0.5];
+    [self.addressBorderView.layer setBorderColor: [borderColor CGColor]];
+    [self.addressBorderView.layer setBorderWidth: 0.5];
+    [self.callUsImageView.layer setBorderColor: [borderColor CGColor]];
+    [self.callUsImageView.layer setBorderWidth: 0.5];
+    [self.visitUsImageView.layer setBorderColor: [borderColor CGColor]];
+    [self.visitUsImageView.layer setBorderWidth: 0.5];
 
     // Change button color
     _menuButton.tintColor = [UIColor lightGrayColor];
