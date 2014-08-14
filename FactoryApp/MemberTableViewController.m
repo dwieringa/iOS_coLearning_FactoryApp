@@ -94,19 +94,22 @@ static NSInteger const RowHeight = 60;
     } else {
         cell.backgroundColor = [UIColor whiteColor];
     }
-
-    cell.imageView.image = member.thumbnail;
-    cell.imageView.layer.cornerRadius = cell.imageView.image.size.width / 2.0;
-    cell.imageView.clipsToBounds = YES;
     
     // if the image hasn't been downloaded yet, do so in a background thread and update the table when complete
     if (member.thumbnail == nil) {
+
+        //create a blank placeholder
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(50, 50), NO, 0.0);
+        UIImage *blank = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        cell.imageView.image = blank;
+        
+        // initiate the download in the background
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         __weak UIViewController *weakSelf = self;
         dispatch_async(queue, ^{
-            member.thumbnail = member.pic; // the download happens here
-            //TODO: actually create a smaller/scaled thumbnail.
-            
+            member.thumbnail = member.thumbnailFromSource; // the download happens here
+
             // update the TableViewCell in the main thread if the user hasn't scrolled off the screen
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if ([weakSelf isViewLoaded]) {
@@ -120,6 +123,12 @@ static NSInteger const RowHeight = 60;
                 }
             });
         });
+    }
+    else
+    {
+        cell.imageView.image = member.thumbnail;
+        cell.imageView.layer.cornerRadius = cell.imageView.image.size.width / 2.0;
+        cell.imageView.clipsToBounds = YES;
     }
 
     return cell;

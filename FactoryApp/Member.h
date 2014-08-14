@@ -19,7 +19,9 @@
 @property (nonatomic, strong) NSString *twitter;
 @property (nonatomic, strong) NSURL *picURL;
 @property (nonatomic, strong, readonly) UIImage *pic;
+@property (nonatomic, strong) NSURL *thumbnailURL;
 @property (nonatomic, strong) UIImage *thumbnail;
+@property (nonatomic, strong, readonly) UIImage *thumbnailFromSource;
 
 - (id)initWithDictionary:(NSDictionary *)properties;
 

@@ -23,6 +23,7 @@ static NSInteger const ThumbnailSize = 50;
         _name = properties[@"NAME"];
         _twitter = properties[@"TWITTER"];
         _picURL = [NSURL URLWithString:properties[@"pic"][@"url"]];
+        _thumbnailURL = [NSURL URLWithString:properties[@"thumbnail"][@"url"]];
     }
     return self;
 }
@@ -41,12 +42,40 @@ static NSInteger const ThumbnailSize = 50;
     return _pic;
 }
 
+@synthesize thumbnailFromSource = _thumbnailFromSource;
+- (UIImage *)thumbnailFromSource
+{
+    if (_thumbnailFromSource == nil) {
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.thumbnailURL];
+        [request setValue:@"nq5kBbLQqWjW7taX9UVLoiEkyCDJ8gONbw92Fx6d" forHTTPHeaderField:@"X-Parse-Application-Id"];
+        [request setValue:@"hwz7WjcntmkHEphq0JazkvX1WoN4jcLi3IKo5UbY" forHTTPHeaderField:@"X-Parse-REST-API-Key"];
+        NSLog(@"Downlading thumbnail %@", request.URL);
+        NSData *imageData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        _thumbnailFromSource = [UIImage imageWithData:imageData];
+        
+        // fall back to portrait if thumbnail unavailable
+        if (_thumbnailFromSource == nil) {
+            _thumbnailFromSource = self.pic;
+        }
+
+        // fall back to blank if portrait is also unavailable
+        if (_thumbnailFromSource == nil) {
+            UIGraphicsBeginImageContextWithOptions(CGSizeMake(ThumbnailSize, ThumbnailSize), NO, 0.0);
+            UIImage *blank = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            _thumbnailFromSource = blank;
+        }
+    }
+    return _thumbnailFromSource;
+}
+
 - (void)setThumbnail:(UIImage *)thumbnail
 {
-    if( thumbnail.size.width != ThumbnailSize || thumbnail.size.height != ThumbnailSize)
+    if (thumbnail != nil &&
+        (thumbnail.size.width != ThumbnailSize || thumbnail.size.height != ThumbnailSize))
     {
         CGSize thumbnailSize = CGSizeMake(ThumbnailSize, ThumbnailSize);
-        UIGraphicsBeginImageContextWithOptions(thumbnailSize, NO, UIScreen.mainScreen.scale);
+        UIGraphicsBeginImageContextWithOptions(thumbnailSize, NO, 0.0f);
         [thumbnail drawInRect:CGRectMake(0, 0, thumbnailSize.width, thumbnailSize.height)];
         _thumbnail = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
