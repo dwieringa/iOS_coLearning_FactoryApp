@@ -580,6 +580,20 @@ Grand Rapids, MI 49503</string>
                                     <segue destination="yX7-F7-Tzd" kind="custom" customClass="SWRevealViewControllerSegue" id="CDV-bi-4Uj"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-R4-smC">
+                                <rect key="frame" x="0.0" y="200" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="JOIN" image="joinIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YhP-ev-sga" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VVh-J4-vWL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -588,6 +602,7 @@ Grand Rapids, MI 49503</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="aboutButton" destination="q85-Su-C3s" id="FnD-FW-Q0f"/>
+                        <outlet property="joinButton" destination="0NI-R4-smC" id="Gyf-Rc-Nkd"/>
                         <outlet property="meetButton" destination="Sgv-fK-KRb" id="x90-SC-4w8"/>
                         <outlet property="spaceButton" destination="h9l-J3-kY9" id="tYn-N1-Wvi"/>
                     </connections>
@@ -629,31 +644,35 @@ Grand Rapids, MI 49503</string>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNx-vg-fmj" userLabel="Talk To Me View">
-                                        <rect key="frame" x="20" y="323" width="280" height="182"/>
+                                        <rect key="frame" x="20" y="323" width="280" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zir-XG-pjz">
-                                                <rect key="frame" x="110" y="0.0" width="60" height="55"/>
+                                                <rect key="frame" x="115" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2Qd-Di-mHq"/>
+                                                    <constraint firstAttribute="width" constant="50" id="GeT-u6-0H1"/>
+                                                </constraints>
                                                 <state key="normal" image="chat">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TALK TO ME ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubx-pT-Ljk">
-                                                <rect key="frame" x="79" y="63" width="122" height="19"/>
+                                                <rect key="frame" x="79" y="58" width="122" height="19"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The web, startup culture, cats, why Seattle is awesome" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-tk-u02">
-                                                <rect key="frame" x="20" y="90" width="240" height="34"/>
+                                                <rect key="frame" x="20" y="85" width="240" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovv-b4-wTw">
-                                                <rect key="frame" x="32" y="132" width="217" height="30"/>
+                                                <rect key="frame" x="32" y="127" width="217" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.69411333929999997" blue="0.060536668100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -685,7 +704,7 @@ Grand Rapids, MI 49503</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="tfP-Dx-1Kd">
-                                        <rect key="frame" x="20" y="513" width="280" height="17"/>
+                                        <rect key="frame" x="20" y="508" width="280" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="About Janson: blah blah blah">
@@ -903,17 +922,18 @@ Grand Rapids, MI 49503</string>
     <resources>
         <image name="about-image" width="641" height="301"/>
         <image name="aboutIcon" width="61" height="61"/>
-        <image name="callus" width="72" height="72"/>
-        <image name="chat" width="60" height="55"/>
+        <image name="callus" width="145" height="145"/>
+        <image name="chat" width="121" height="110"/>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
         <image name="hamburger" width="30" height="30"/>
+        <image name="joinIcon" width="61" height="61"/>
         <image name="meetIcon" width="61" height="61"/>
         <image name="open space-blurred" width="641" height="1013"/>
         <image name="spaceIcon" width="61" height="61"/>
         <image name="twitter" width="88" height="88"/>
-        <image name="visitus" width="72" height="72"/>
+        <image name="visitus" width="145" height="145"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
