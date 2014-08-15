@@ -811,8 +811,12 @@ Grand Rapids, MI 49503</string>
                     <connections>
                         <outlet property="aboutMember" destination="tfP-Dx-1Kd" id="PwK-fw-zpR"/>
                         <outlet property="askMeAbout" destination="0KQ-tk-u02" id="ajK-aL-GgH"/>
+                        <outlet property="emailButton" destination="sti-Ic-dT0" id="kFH-Jq-OvT"/>
+                        <outlet property="facebookButton" destination="TZc-jC-CGJ" id="IrG-dc-kot"/>
                         <outlet property="nameLabel" destination="Bu9-r7-Sr4" id="ziW-0h-8ij"/>
                         <outlet property="photoImageView" destination="98E-Z7-gx4" id="UDd-EY-tvH"/>
+                        <outlet property="socialLinkView" destination="aiM-LP-9Vt" id="5uf-iD-wrJ"/>
+                        <outlet property="twitterButton" destination="Nz9-ld-WBr" id="sjM-HT-JHp"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showFacebookSegue" id="0fr-m6-rcd"/>
                         <segue destination="gBU-A9-rVo" kind="push" identifier="showTwitterSegue" id="ph4-Ax-rjm"/>
                     </connections>
@@ -830,11 +834,11 @@ Grand Rapids, MI 49503</string>
                         <viewControllerLayoutGuide type="bottom" id="Kah-nu-Y5X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Bv-R0-UFS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COC-Wm-WmX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -917,7 +921,7 @@ Grand Rapids, MI 49503</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="ph4-Ax-rjm"/>
         <segue reference="2Qv-76-CA6"/>
-        <segue reference="4qH-Pt-Xx3"/>
     </inferredMetricsTieBreakers>
 </document>

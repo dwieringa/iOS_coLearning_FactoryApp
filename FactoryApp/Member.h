@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *ama;
 @property (nonatomic, strong) NSString *bio;
 @property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *fb;
+@property (nonatomic, strong) NSString *facebook;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong, readonly) NSString *name;

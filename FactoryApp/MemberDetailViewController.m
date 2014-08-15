@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *askMeAbout;
 @property (weak, nonatomic) IBOutlet UILabel *aboutMember;
+@property (weak, nonatomic) IBOutlet UIView *socialLinkView;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
 
 @end
 
@@ -41,12 +45,11 @@
     self.photoImageView.image = self.person.pic;
     self.askMeAbout.text = self.person.ama;
     [self.askMeAbout sizeToFit];
-    
-    if (![self.person.bio  isEqual: @""] && [self.aboutMember respondsToSelector:@selector(setAttributedText:)])
+
+    // fill in member bio
+    if (![self.person.bio isEqual: @""] && [self.aboutMember respondsToSelector:@selector(setAttributedText:)])
     {    // fill about text in attributed fashion
         
-//        NSArray *nameParts = [self.person.name componentsSeparatedByString:@" "];
-        //        NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", [nameParts objectAtIndex:0]];
         NSMutableString *aboutText = [NSMutableString stringWithFormat:@"About %@: ", self.person.firstName];
         NSRange rangeOfBold = NSMakeRange(0, aboutText.length);
         [aboutText appendString:self.person.bio];
@@ -66,8 +69,52 @@
     
     twitterAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",self.person.twitter]];
     twitterWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@",self.person.twitter]];
-    facebookAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"fb://profile/%@",self.person.fb]];
-    facebookWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://facebook.com/%@",self.person.fb]];
+    facebookAppURL = [NSURL URLWithString:[NSString stringWithFormat:@"fb://profile/%@",self.person.facebook]];
+    facebookWebURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://facebook.com/%@",self.person.facebook]];
+    
+    // dynamically layout social link buttons based on which services the member advertises
+    [self.socialLinkView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    NSDictionary *nameMap = @{@"facebook": self.facebookButton,
+                              @"twitter": self.twitterButton,
+                              @"email": self.emailButton};
+    NSMutableString *horizontalVFL = [NSMutableString stringWithFormat:@"H:|->=0-"];
+    // H:|->=0-[twitter(50)]-8-[facebook(50)]-8-[email(50)]->=0-|
+    // H:|->=0-[twitter(50)]-8-[email(50)]->=0-|
+    // H:|->=0-[email(50)]->=0-|
+
+    BOOL hasButtons = NO;
+    if (![self.person.twitter isEqualToString:@""]) {
+        [self.socialLinkView addSubview:self.twitterButton];
+        [horizontalVFL appendString:@"[twitter(50)]"];
+        [self.socialLinkView addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"V:|[twitter(50)]|"
+                                             options:0 metrics:nil views:nameMap]];
+        hasButtons = YES;
+    }
+    
+    if (![self.person.facebook isEqualToString:@""]) {
+        [self.socialLinkView addSubview:self.facebookButton];
+        if (hasButtons) { [horizontalVFL appendString:@"-8-"]; }
+        [horizontalVFL appendString:@"[facebook(50)]"];
+        [self.socialLinkView addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"V:|[facebook(50)]|"
+                                             options:0 metrics:nil views:nameMap]];
+        hasButtons = YES;
+    }
+    
+    if (![self.person.email isEqualToString:@""]) {
+        [self.socialLinkView addSubview:self.emailButton];
+        if (hasButtons) { [horizontalVFL appendString:@"-8-"]; }
+        [horizontalVFL appendString:@"[email(50)]"];
+        [self.socialLinkView addConstraints:[NSLayoutConstraint
+                                             constraintsWithVisualFormat:@"V:|[email(50)]|"
+                                             options:0 metrics:nil views:nameMap]];
+        hasButtons = YES;
+    }
+    [horizontalVFL appendString:@"->=0-|"];
+    [self.socialLinkView addConstraints:[NSLayoutConstraint
+                                         constraintsWithVisualFormat:horizontalVFL
+                                         options:0 metrics:nil views:nameMap]];
 }
 
 - (IBAction)twitterButtonPressed:(id)sender {
