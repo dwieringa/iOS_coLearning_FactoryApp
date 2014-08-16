@@ -38,6 +38,7 @@
 		559B99B31947539E00907493 /* MemberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99B21947539E00907493 /* MemberTableViewController.m */; };
 		559B99B61947B3F300907493 /* MemberDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99B51947B3F300907493 /* MemberDetailViewController.m */; };
 		55B7FAB51982E3E300AB5D3C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B7FAB41982E3E300AB5D3C /* SWRevealViewController.m */; };
+		55ED6F3E199EF45900CBB7CD /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55ED6F3D199EF45900CBB7CD /* CreditsViewController.m */; };
 		55EDB970198801D70024D5F2 /* RevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EDB96F198801D70024D5F2 /* RevealViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,8 @@
 		559B99B51947B3F300907493 /* MemberDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDetailViewController.m; sourceTree = "<group>"; };
 		55B7FAB31982E3E300AB5D3C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		55B7FAB41982E3E300AB5D3C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		55ED6F3C199EF45900CBB7CD /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
+		55ED6F3D199EF45900CBB7CD /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		55EDB96E198801D70024D5F2 /* RevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealViewController.h; sourceTree = "<group>"; };
 		55EDB96F198801D70024D5F2 /* RevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +194,8 @@
 				550B51E319548FBC00B531CA /* JoinViewController.m */,
 				557179CB194F8B05003F8A19 /* SpaceViewController.h */,
 				557179CC194F8B05003F8A19 /* SpaceViewController.m */,
+				55ED6F3C199EF45900CBB7CD /* CreditsViewController.h */,
+				55ED6F3D199EF45900CBB7CD /* CreditsViewController.m */,
 				553C044819354B100088A5E9 /* Images.xcassets */,
 				553C043419354B100088A5E9 /* Supporting Files */,
 			);
@@ -398,6 +403,7 @@
 				550B51E419548FBC00B531CA /* JoinViewController.m in Sources */,
 				553C043A19354B100088A5E9 /* main.m in Sources */,
 				559B99AF194748FC00907493 /* Member.m in Sources */,
+				55ED6F3E199EF45900CBB7CD /* CreditsViewController.m in Sources */,
 				55EDB970198801D70024D5F2 /* RevealViewController.m in Sources */,
 				557179CD194F8B05003F8A19 /* SpaceViewController.m in Sources */,
 				559B99B31947539E00907493 /* MemberTableViewController.m in Sources */,

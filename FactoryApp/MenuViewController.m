@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *spaceButton;
 @property (weak, nonatomic) IBOutlet UIButton *aboutButton;
 @property (weak, nonatomic) IBOutlet UIButton *joinButton;
+@property (weak, nonatomic) IBOutlet UIButton *creditsButton;
 
 @end
 
@@ -40,6 +41,7 @@
     [[self.spaceButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.joinButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
     [[self.aboutButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
+    [[self.creditsButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 - (void)didReceiveMemoryWarning
