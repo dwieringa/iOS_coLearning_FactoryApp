@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "553C042919354B100088A5E9"
                BuildableName = "FactoryApp.app"
-               BlueprintName = "FactoryApp"
+               BlueprintName = "The Factory"
                ReferencedContainer = "container:FactoryApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
             BuildableName = "FactoryApp.app"
-            BlueprintName = "FactoryApp"
+            BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
             BuildableName = "FactoryApp.app"
-            BlueprintName = "FactoryApp"
+            BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
             BuildableName = "FactoryApp.app"
-            BlueprintName = "FactoryApp"
+            BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -103,7 +103,7 @@
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "553C042919354B100088A5E9"
                      BuildableName = "FactoryApp.app"
-                     BlueprintName = "FactoryApp"
+                     BlueprintName = "The Factory"
                      ReferencedContainer = "container:FactoryApp.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>

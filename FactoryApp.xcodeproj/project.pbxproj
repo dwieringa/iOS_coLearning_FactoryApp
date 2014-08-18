@@ -62,7 +62,7 @@
 		550B51E81958F64300B531CA /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		550B51E91958F64300B531CA /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5518E91C1952607E00EFB1BF /* buildnumber.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = buildnumber.xcconfig; sourceTree = "<group>"; };
-		553C042A19354B100088A5E9 /* FactoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		553C042A19354B100088A5E9 /* The Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Factory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553C042D19354B100088A5E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		553C042F19354B100088A5E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		553C043119354B100088A5E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -148,7 +148,7 @@
 		553C042B19354B100088A5E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				553C042A19354B100088A5E9 /* FactoryApp.app */,
+				553C042A19354B100088A5E9 /* The Factory.app */,
 				553C044E19354B100088A5E9 /* FactoryAppTests.xctest */,
 			);
 			name = Products;
@@ -266,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		553C042919354B100088A5E9 /* FactoryApp */ = {
+		553C042919354B100088A5E9 /* The Factory */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 553C045F19354B100088A5E9 /* Build configuration list for PBXNativeTarget "FactoryApp" */;
+			buildConfigurationList = 553C045F19354B100088A5E9 /* Build configuration list for PBXNativeTarget "The Factory" */;
 			buildPhases = (
 				553C042619354B100088A5E9 /* Sources */,
 				553C042719354B100088A5E9 /* Frameworks */,
@@ -280,9 +280,9 @@
 			);
 			dependencies = (
 			);
-			name = FactoryApp;
+			name = "The Factory";
 			productName = FactoryApp;
-			productReference = 553C042A19354B100088A5E9 /* FactoryApp.app */;
+			productReference = 553C042A19354B100088A5E9 /* The Factory.app */;
 			productType = "com.apple.product-type.application";
 		};
 		553C044D19354B100088A5E9 /* FactoryAppTests */ = {
@@ -334,7 +334,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				553C042919354B100088A5E9 /* FactoryApp */,
+				553C042919354B100088A5E9 /* The Factory */,
 				553C044D19354B100088A5E9 /* FactoryAppTests */,
 			);
 		};
@@ -428,7 +428,7 @@
 /* Begin PBXTargetDependency section */
 		553C045419354B100088A5E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 553C042919354B100088A5E9 /* FactoryApp */;
+			target = 553C042919354B100088A5E9 /* The Factory */;
 			targetProxy = 553C045319354B100088A5E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,7 +645,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		553C045F19354B100088A5E9 /* Build configuration list for PBXNativeTarget "FactoryApp" */ = {
+		553C045F19354B100088A5E9 /* Build configuration list for PBXNativeTarget "The Factory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				553C046019354B100088A5E9 /* Debug */,

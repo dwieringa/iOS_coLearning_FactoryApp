@@ -753,7 +753,7 @@ Grand Rapids, MI 49503</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="CREDITS" image="aboutIcon">
+                                <state key="normal" title="CREDITS" image="creditsIcon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1128,6 +1128,7 @@ Grand Rapids, MI 49503</string>
         <image name="aboutIcon" width="61" height="61"/>
         <image name="callus" width="145" height="145"/>
         <image name="chat" width="121" height="110"/>
+        <image name="creditsIcon" width="30" height="30"/>
         <image name="email" width="88" height="88"/>
         <image name="facebook" width="88" height="88"/>
         <image name="factorylogo" width="220" height="146"/>
