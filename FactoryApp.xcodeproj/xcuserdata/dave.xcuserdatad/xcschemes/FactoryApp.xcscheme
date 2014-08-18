@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "553C042919354B100088A5E9"
-               BuildableName = "FactoryApp.app"
+               BuildableName = "The Factory.app"
                BlueprintName = "The Factory"
                ReferencedContainer = "container:FactoryApp.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
-            BuildableName = "FactoryApp.app"
+            BuildableName = "The Factory.app"
             BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
-            BuildableName = "FactoryApp.app"
+            BuildableName = "The Factory.app"
             BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "553C042919354B100088A5E9"
-            BuildableName = "FactoryApp.app"
+            BuildableName = "The Factory.app"
             BlueprintName = "The Factory"
             ReferencedContainer = "container:FactoryApp.xcodeproj">
          </BuildableReference>
@@ -102,7 +102,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "553C042919354B100088A5E9"
-                     BuildableName = "FactoryApp.app"
+                     BuildableName = "The Factory.app"
                      BlueprintName = "The Factory"
                      ReferencedContainer = "container:FactoryApp.xcodeproj">
                   </BuildableReference>
