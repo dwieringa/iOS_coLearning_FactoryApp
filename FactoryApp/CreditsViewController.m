@@ -8,6 +8,7 @@
 
 #import "CreditsViewController.h"
 #import "SWRevealViewController.h"
+#import "WebViewController.h"
 
 @interface CreditsViewController ()
 
@@ -45,15 +46,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+- (IBAction)daveTouched:(id)sender {
+    if([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
+        mailCont.mailComposeDelegate = self;
+        [mailCont setToRecipients:[NSArray arrayWithObject:@"davew@userwise.com"]];
+        [mailCont setSubject:@"Factor App Inquiry"];
+        [mailCont setMessageBody:@"\n\nSent from The Factory App" isHTML:NO];
+        [self presentViewController:mailCont animated:YES completion:nil];
+    }
+}
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    //handle any error
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"showElevatorUpSegue"]) {
+        // Get the new view controller using [segue destinationViewController].
+        WebViewController *vc = segue.destinationViewController;
+        
+        // Pass the needed URL to the new view controller.
+        vc.url = [NSURL URLWithString:@"http://www.elevatorup.com"];
+    }
 }
-*/
 
 @end

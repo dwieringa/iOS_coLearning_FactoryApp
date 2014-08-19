@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface CreditsViewController : UIViewController
+@interface CreditsViewController : UIViewController<MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end
