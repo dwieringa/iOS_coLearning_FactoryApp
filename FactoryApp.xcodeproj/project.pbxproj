@@ -314,7 +314,7 @@
 				ORGANIZATIONNAME = "Userwise Solutions";
 				TargetAttributes = {
 					553C042919354B100088A5E9 = {
-						DevelopmentTeam = A3AVF64FX3;
+						DevelopmentTeam = XEAF328Y5X;
 					};
 					553C044D19354B100088A5E9 = {
 						TestTargetID = 553C042919354B100088A5E9;
