@@ -83,7 +83,7 @@
     // H:|->=0-[email(50)]->=0-|
 
     BOOL hasButtons = NO;
-    if (![self.person.twitter isEqualToString:@""]) {
+    if (self.person.twitter && ![self.person.twitter isEqualToString:@""]) {
         [self.socialLinkView addSubview:self.twitterButton];
         [horizontalVFL appendString:@"[twitter(50)]"];
         [self.socialLinkView addConstraints:[NSLayoutConstraint
@@ -92,7 +92,7 @@
         hasButtons = YES;
     }
     
-    if (![self.person.facebook isEqualToString:@""]) {
+    if (self.person.facebook && ![self.person.facebook isEqualToString:@""]) {
         [self.socialLinkView addSubview:self.facebookButton];
         if (hasButtons) { [horizontalVFL appendString:@"-8-"]; }
         [horizontalVFL appendString:@"[facebook(50)]"];
@@ -102,7 +102,7 @@
         hasButtons = YES;
     }
     
-    if (![self.person.email isEqualToString:@""]) {
+    if (self.person.email && ![self.person.email isEqualToString:@""]) {
         [self.socialLinkView addSubview:self.emailButton];
         if (hasButtons) { [horizontalVFL appendString:@"-8-"]; }
         [horizontalVFL appendString:@"[email(50)]"];
