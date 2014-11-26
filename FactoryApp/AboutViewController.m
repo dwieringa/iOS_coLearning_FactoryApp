@@ -121,9 +121,9 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://616-379-9377"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://616-803-9131"]];
     } else if (buttonIndex == 2) {
-        [UIPasteboard generalPasteboard].string = @"616-379-9377";
+        [UIPasteboard generalPasteboard].string = @"616-803-9131";
     }
 }
 
@@ -133,7 +133,7 @@
     MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];
     destination.name = @"The Factory";
     destination.url = [NSURL URLWithString:@"http://www.workthefactory.com"];
-    destination.phoneNumber = @"616.379.9377";
+    destination.phoneNumber = @"616.803.9131";
     NSArray* items = [[NSArray alloc] initWithObjects: destination, nil];
     NSDictionary* options = [[NSDictionary alloc] initWithObjectsAndKeys:
                              MKLaunchOptionsDirectionsModeDriving,
