@@ -99,7 +99,7 @@
         mailCont.mailComposeDelegate = self;
         [mailCont setToRecipients:[NSArray arrayWithObject:@"hello@workthefactory.com"]];
         [mailCont setSubject:@"Hello!"];
-        [mailCont setMessageBody:@"\n\nSent from FactoryApp" isHTML:NO];
+        [mailCont setMessageBody:@"\n\nSent from The Factory app" isHTML:NO];
         [self presentViewController:mailCont animated:YES completion:nil];
     }
 }
