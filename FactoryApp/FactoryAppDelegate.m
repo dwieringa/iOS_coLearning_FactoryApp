@@ -8,6 +8,8 @@
 
 #import "FactoryAppDelegate.h"
 #import <HockeySDK/HockeySDK.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation FactoryAppDelegate
 
@@ -17,6 +19,8 @@
 //    [[BITHockeyManager sharedHockeyManager].authenticator setIdentificationType:BITAuthenticatorIdentificationTypeDevice];
 //    [[BITHockeyManager sharedHockeyManager] startManager];
 //    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
+
+    [Fabric with:@[CrashlyticsKit]];
     
     self.justLaunched = YES;
     
