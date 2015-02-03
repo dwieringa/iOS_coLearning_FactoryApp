@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "Tracker.h"
 
 @interface WebViewController ()
 
@@ -35,6 +36,8 @@
     
     NSURLRequest *joinRequest = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:joinRequest];
+
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
 }
 
 - (void)didReceiveMemoryWarning

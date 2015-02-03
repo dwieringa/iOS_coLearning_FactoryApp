@@ -8,6 +8,7 @@
 
 #import "JoinViewController.h"
 #import "SWRevealViewController.h"
+#import "Tracker.h"
 
 @interface JoinViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -47,6 +48,8 @@
     
     NSURLRequest *joinRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://workthefactory.com/membership/"]];
     [self.webView loadRequest:joinRequest];
+
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
 }
 
 - (void)didReceiveMemoryWarning

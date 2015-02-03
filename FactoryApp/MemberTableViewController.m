@@ -11,6 +11,7 @@
 #import "Member.h"
 #import "MemberDatastore.h"
 #import "SWRevealViewController.h"
+#import "Tracker.h"
 
 static NSInteger const RowHeight = 60;
 
@@ -49,6 +50,12 @@ static NSInteger const RowHeight = 60;
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
 }
 
 - (void)didReceiveMemoryWarning
@@ -141,6 +148,8 @@ static NSInteger const RowHeight = 60;
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Search Run"];
+
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
     searchResults = [MemberDatastore.sharedInstance.members filteredArrayUsingPredicate:resultPredicate];
 }

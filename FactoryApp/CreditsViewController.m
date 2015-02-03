@@ -9,6 +9,7 @@
 #import "CreditsViewController.h"
 #import "SWRevealViewController.h"
 #import "WebViewController.h"
+#import "Tracker.h"
 
 @interface CreditsViewController ()
 
@@ -40,6 +41,12 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -47,6 +54,8 @@
 }
 
 - (IBAction)daveTouched:(id)sender {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Developer Tapped"];
+
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
         mailCont.mailComposeDelegate = self;
@@ -69,6 +78,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showElevatorUpSegue"]) {
+        [[Tracker sharedTracker] trackButtonTapWithName:@"ElevatorUp Tapped"];
+
         // Get the new view controller using [segue destinationViewController].
         WebViewController *vc = segue.destinationViewController;
         

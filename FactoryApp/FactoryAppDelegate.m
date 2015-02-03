@@ -10,6 +10,9 @@
 #import <HockeySDK/HockeySDK.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import "Tracker.h"
+
+NSString * const GOOGLE_ANALYTICS_TRACKING_ID = @"UA-59295519-1";
 
 @implementation FactoryAppDelegate
 
@@ -21,10 +24,16 @@
 //    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
 
     [Fabric with:@[CrashlyticsKit]];
+    [self setupGoogleAnalytics];
     
     self.justLaunched = YES;
     
     return YES;
+}
+
+- (void)setupGoogleAnalytics
+{
+    [[Tracker sharedTracker] setupWithTrackingID:GOOGLE_ANALYTICS_TRACKING_ID];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

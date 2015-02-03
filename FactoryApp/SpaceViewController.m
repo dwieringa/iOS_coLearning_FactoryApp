@@ -8,6 +8,7 @@
 
 #import "SpaceViewController.h"
 #import "SWRevealViewController.h"
+#import "Tracker.h"
 
 static NSInteger const RequiredLengthOfSwipeGesture = 50;
 
@@ -126,6 +127,12 @@ static NSInteger const RequiredLengthOfSwipeGesture = 50;
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
+}
+
 - (void)viewDidLayoutSubviews
 {
     // init image location/size values based on autolayouts outcome
@@ -207,6 +214,12 @@ static NSInteger const RequiredLengthOfSwipeGesture = 50;
         }
 
         if (swipeCompleted) {
+            if(xTranslation > 0) {
+                [[Tracker sharedTracker] trackButtonTapWithName:@"Space Swipe Right"];
+            } else {
+                [[Tracker sharedTracker] trackButtonTapWithName:@"Space Swipe Left"];
+            }
+            
             // fade old description label out
             [UIView animateWithDuration:.25
                                   delay:0

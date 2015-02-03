@@ -9,6 +9,7 @@
 #import "AboutViewController.h"
 #import "SWRevealViewController.h"
 #import "WebViewController.h"
+#import "Tracker.h"
 @import MapKit;
 
 @interface AboutViewController () {
@@ -67,6 +68,12 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -75,6 +82,8 @@
 
 - (IBAction)twitterButtonPressed:(UIButton *)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Factory Twitter"];
+
     if ([[UIApplication sharedApplication] canOpenURL:twitterAppURL]) {
         [[UIApplication sharedApplication] openURL:twitterAppURL];
     } else {
@@ -85,6 +94,8 @@
 
 - (IBAction)facebookButtonPressed:(id)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Factory Facebook"];
+    
     if ([[UIApplication sharedApplication] canOpenURL:facebookAppURL]) {
         [[UIApplication sharedApplication] openURL:facebookAppURL];
     } else {
@@ -94,6 +105,8 @@
 
 - (IBAction)emailUsPressed:(id)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Factory Email"];
+
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
         mailCont.mailComposeDelegate = self;
@@ -112,6 +125,8 @@
 
 - (IBAction)callUsPressed:(id)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Factory Phone"];
+
     //TODO: check for dialing support on device
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Call The Factory" message:@"Would you like to call The Factory now or copy the number?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: @"Call", @"Copy", nil];
@@ -128,6 +143,8 @@
 }
 
 - (IBAction)visitUsPressed:(id)sender {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Factory Address"];
+
     CLLocationCoordinate2D theFactoryLocation = CLLocationCoordinate2DMake(42.963099, -85.669536);
     MKPlacemark* place = [[MKPlacemark alloc] initWithCoordinate: theFactoryLocation addressDictionary: nil];
     MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];

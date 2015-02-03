@@ -8,6 +8,7 @@
 
 #import "MemberDetailViewController.h"
 #import "WebViewController.h"
+#import "Tracker.h"
 
 @interface MemberDetailViewController () {
     NSURL *twitterAppURL;
@@ -117,7 +118,15 @@
                                          options:0 metrics:nil views:nameMap]];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[Tracker sharedTracker] trackScreenViewWithName:self.title];
+}
+
 - (IBAction)twitterButtonPressed:(id)sender {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Member Twitter"];
+
     if ([[UIApplication sharedApplication] canOpenURL:twitterAppURL]) {
         [[UIApplication sharedApplication] openURL:twitterAppURL];
     } else {
@@ -127,6 +136,8 @@
 
 - (IBAction)facebookButtonPressed:(id)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Member FaceBook"];
+
     if ([[UIApplication sharedApplication] canOpenURL:facebookAppURL]) {
         NSLog(@"Launching Facebook app");
         [[UIApplication sharedApplication] openURL:facebookAppURL];
@@ -138,6 +149,7 @@
 
 - (IBAction)emailButtonPressed:(id)sender
 {
+    [[Tracker sharedTracker] trackButtonTapWithName:@"Member Email"];
     
     if([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
