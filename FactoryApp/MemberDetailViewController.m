@@ -78,7 +78,7 @@
     NSDictionary *nameMap = @{@"facebook": self.facebookButton,
                               @"twitter": self.twitterButton,
                               @"email": self.emailButton};
-    NSMutableString *horizontalVFL = [NSMutableString stringWithFormat:@"H:|->=0-"];
+    NSMutableString *horizontalVFL = [NSMutableString stringWithFormat:@"H:|-==0-"];
     // H:|->=0-[twitter(50)]-8-[facebook(50)]-8-[email(50)]->=0-|
     // H:|->=0-[twitter(50)]-8-[email(50)]->=0-|
     // H:|->=0-[email(50)]->=0-|
@@ -112,7 +112,7 @@
                                              options:0 metrics:nil views:nameMap]];
         hasButtons = YES;
     }
-    [horizontalVFL appendString:@"->=0-|"];
+    [horizontalVFL appendString:@"-==0-|"];
     [self.socialLinkView addConstraints:[NSLayoutConstraint
                                          constraintsWithVisualFormat:horizontalVFL
                                          options:0 metrics:nil views:nameMap]];
